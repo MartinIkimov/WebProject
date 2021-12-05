@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments/commons::head">
+  </head>
+  <body>
+    <header th:replace="fragments/commons::header">
+  </header>
+
+  <main class="mb-5">
+    <div class="container text-lightGreen mb-5">
+      <div class="row align-items-center">
+        <div class="col text-center">
+          <h1 class="fw-bold mb-5 display-3">Mars</h1>
+          <h2 class="mt-5 pt-2 fst-italic">The red planet is dusty, cold world with a thin atmosphere and is home to four NASA robots.</h2>
+        </div>
+        <div id="canvasContainer" class="col">
+          <canvas height="700"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    
+
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">God of War</h3>
+      <p>With the Terran system well behind us, we next encounter a beautiful, bright red world. This is the planet Mars, and it is the fourth planet from the Sun. It was named after the Roman god of war because its color reminded observers of a bloody Roman battlefield. Early astronomers believed they could see faint, dark lines crossing the surface of the planet. Some believed these to be artificially built canals. This gave rise to some of the early speculation of intelligent life on Mars. These lines were later found to be an optical illusion. Later unmanned missions to the planet found no evidence of the so-called canals.</p>
+      <p>Still, there is perhaps no other body in the Solar System that has intrigued us more than Mars. To this very day, it is still one of the most likely candidates for extraterrestrial life. In fact, meteorites recently discovered in Antarctica are believed to have originated from the red planet. These ancient Martian rocks may contain fossils of tiny bacteria. If this turns out to be true, it will be the first evidence that life evolved on other planets besides Earth.</p>
+      <div class="d-flex justify-content-evenly mb-5 mt-4">
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/mars04_sk12.jpg" class="card-img-top" alt="The surface on Mars">
+          <div class="card-body">
+            <p class="card-text text-center">Viking lander image the Martian surface showing water ice frost</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/mars05_sk12.jpg" class="card-img-top" alt="Husband Hill">
+          <div class="card-body">
+            <p class="card-text text-center">	Spirit rover image of a feature known as "Husband Hill"</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/mars06_sk12.jpg" class="card-img-top" alt="Cape St. Vincent in Victoria Crater">
+          <div class="card-body">
+            <p class="card-text text-center">Opportunity rover image of Cape St. Vincent in Victoria Crater</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">The Red Planet</h3>
+      <p>The bright red color of Mars has earned it the name of red planet. This unique color is caused by the chemistry of its surface. Mars does have a thin atmosphere, which helps cause iron compounds to oxidize. It is this iron oxide in the rocks and sand that gives the planet it reddish-brown color. It could very appropriately be called the "rusty" planet.</p>
+      <p>We have learned a great deal about Mars in the last few decades. Several unmanned space missions have been sent to explore the red planet. Several Mariner spacecraft orbited the planet in the mid and late 1960's. In 1975, two Viking spacecraft landed on the surface, sending back the first color pictures of this alien world. Recently, the Mars Pathfinder mission visited the planet. A small roving vehicle known as the Sojourner Rover explored the surface sending back the sharpest pictures to date.</p>
+      <p>Scientists continue to be fascinated with Mars because of its similarities to Earth. Some have even suggested that we may be able to colonize the planet in the not too distant future. If the planet does turn out to be completely lifeless, it may be a candidate for a process known as terraforming. This process would involve using various chemical and biological means to make the planet warmer and the atmosphere more hospitable for human life.</p>
+      <div class="d-flex justify-content-center mb-3">
+        <img src="/images/mars07_sk12.jpg" class="img-fluid mt-4" style="width: 800px" alt="Mars picture">
+      </div>
+      <p class="text-center mb-5">Mars Pathfinder image of the Martian surface. The two mountains in the distance are known as the Twin Peaks and are believed to be about 30 meters (100 feet) tall and are about a kilometer (3300 feet) in the distance</p>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Mars</h3>
+      <p>Mars is a small, rocky world about half the size of Earth. As small as it is, however, it is a planet of extremes. Mars is the home of the largest known volcano in the Solar System. Olympus Mons is an extinct volcanic crater that rises 15 miles above the Martian surface. That is over twice the height of the tallest mountain on Earth, Mt. Everest. It is a scar so large it can be seen from Earth.</p>
+      <p>Another gigantic feature of the red planet is Valles Marinares. This is the Martian equivalent of the Grand Canyon. This one is much bigger, however. Valles Marinares stretches 3000 miles (4829 km) along the surface of Mars and is 435 miles (700 km) wide at its widest point. If this canyon existed on Earth, it would stretch across the continental United States from coast to coast!</p>
+      <p>During the Martian winters, the poles of the planet are covered with large sheets of water ice. Several features that resemble riverbeds suggest that there may have been running water on Mars at one time. The thin atmosphere of Mars is composed mainly of carbon dioxide. Winds of up to 300 miles per hour whip up enormous dust storms that constantly erode and reshape the surface of the planet. With an average surface temperature of 60 degrees below zero, it may not seem very hospitable. But with its thin atmosphere and abundance of water, Mars remains the most likely candidate for life anywhere in the Solar System. A future manned mission to the planet is in the works. Only then will we be able to tell if the red planet is really a dead planet.</p>
+
+      <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
+        <div class="row row-cols-1 text-center pb-3">
+          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for the Sun</h3>
+          <p>Diameter = 6,794 km (4,220 miles)</p>
+          <p>Number of Natural Satellites = 2</p>
+          <p>Mean Distancefrom the Sun = 227,940,000 km
+            (141,050,000 miles)</p>
+          <p>Rotational Period = 24.62 hours</p>
+          <p>Orbital Period = 687 days</p>
+          <p>Orbital Eccentricity = 0.093</p>
+          <p>Orbital Inclination = 1.85 degrees</p>
+          <p>Inclination of Axis = 23.98 degrees</p>
+          <p>Mean Surface Temperature = -63° C (-81° F)</p>
+          <p>Main Atmospheric Component = Carbon Dioxide</p>
+          <p>Atmospheric Depth = 161 km (100 miles)</p>
+          <p>Apparent Magnitude = -2.01</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid bg-altBlack">
+    <section>
+      <ul class="hstack gap-3 justify-content-center m-0 p-0">
+          <li class="">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li> 
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+  </section>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script type="module" src="/js/mars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

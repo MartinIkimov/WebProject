@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments/commons::head">
+  </head>
+  <body>
+    <header th:replace="fragments/commons::header">
+   </header>
+
+  <main class="mb-5">
+    <div class="container text-lightGreen mb-5">
+      <div class="row align-items-center">
+        <div class="col text-center">
+          <h1 class="fw-bold mb-5 display-3">The Sun</h1>
+          <h2 class="mt-5 pt-2 fst-italic">The heart of our solar system and its gravity is what keeps every planet and particle in orbit.</h2>
+        </div>
+        <div id="canvasContainer" class="col">
+          <canvas height="700"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    
+
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">A Ball Of Hot Gas</h3>
+      <p>We start our journey through the Solar System at the center. Here we find a gigantic ball of gas so massive that the immense pressure has ignited a fusion reaction. It is an average-sized yellow star known as the Sun. It is one of the most common type of star in the universe. Here in this cosmic furnace, hydrogen atoms under unimaginable pressures are being fused into helium atoms, releasing a tremendous amount of energy. Scientists believe that this reaction has been taking place for almost 5 billion years, and will likely continue for another 5 billion years. At that time, the Sun's hydrogen supply will have been depleted, and heavier elements will begin to fuse. This will cause the star to swell to the size of a red giant, consuming most if the inner planets in the process. Eventually the Sun will end its life as a cold lightless body known as a black dwarf.</p>
+      <div class="d-flex justify-content-evenly mb-5 mt-4">
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/sun05_sk12.jpg" class="card-img-top" alt="Sun Img">
+          <div class="card-body">
+            <p class="card-text text-center">Extreme Ultravoilet Imaging Telescope composite image</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/sun06_sk12.jpg" class="card-img-top" alt="Sun Img">
+          <div class="card-body">
+            <p class="card-text text-center">Extreme Ultravoilet Imaging Telescope view of the Sun</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/sun04_sk00.jpg" class="card-img-top" alt="Sun Img">
+          <div class="card-body">
+            <p class="card-text text-center">Sun as seen from ground-based telescope with a solar filter</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Solar Facts</h3>
+      <p>The Sun is the largest body in the Solar System. It has a diameter of over 863,482 miles (1,390,000 km). The nuclear reactions taking place within the Sun drive its surface temperature to over 10,832° F (6,000° C). Solar radiation is measured in wavelengths that include radio waves, microwaves, infrared, visible light, ultraviolet, x-rays, and gamma rays. Like all other bodies in the Solar System, the Sun rotates on its axis. Unlike the others, its equatorial region rotates faster that its Polar Regions. The equatorial region rotates once every 27 days, while the Polar Regions rotate every 34 days.</p>
+      <div class="d-flex justify-content-center mb-3">
+        <img src="/images/sun-size.jpg" class="img-fluid mt-4" style="width: 800px" alt="sun spot">
+      </div>
+      <p class="text-center mb-5">Side by side comparison of the size of the Sun vs Earth, Uranus, Saturn & Jupiter</p>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of the Sun</h3>
+      <p>Although the light from the Sun seems constant to us, the Sun is far from stable. Magnetic storms and anomalies cause a number of unique phenomena. Dark spots can sometimes been seen on its surface when viewing through a solar filter to reduce the light. Known as sunspots, they are actually parts of the surface that are several hundred degrees cooler than the surrounding areas. Tremendous flames of hot gas called solar flares and prominences shoot out several hundred thousand miles into space. A stream of ionized particles known as the solar wind blows out into the far reaches of the Solar System at speeds of up to a million miles per hour. The Sun provides us with a unique opportunity to study what makes a star work. It is the only star in the universe that is close enough for us to see its surface.</p>
+
+      <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
+        <div class="row row-cols-1 text-center pb-3">
+          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for the Sun</h3>
+          <p>Diameter = 1,390,000 km (863,400 miles)</p>
+          <p>Surface Temperature = 6,000° C (10,800° F)</p>
+          <p>Interior Temperature = 15,000,000° C (27,000,000° F)</p>
+          <p>Rotational Period = 25-36 days</p>
+          <p>Estimated Age = 4.5 billion years</p>
+          <p>Primary Chemical Component = Hydrogen</p>
+          <p>Apparent Magnitude = -26.8</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid bg-altBlack">
+    <section>
+      <ul class="hstack gap-3 justify-content-center m-0 p-0">
+          <li class="">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li> 
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+  </section>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script type="module" src="/js/sun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="fragments/commons::head">
+    </head>
+<body>
+
+    <header th:replace="fragments/commons::header">
+    </header>
+
+<main>
+  <!-- <section class="bg-altGrey text-white rounded border border-2 border-darkGreen position-absolute top-50 start-50 translate-middle"> -->
+    <section id="info">
+    <div class="container border border-2 border-darkGreen bg-altBlack rounded-3">
+      <div class="text-center mt-3 mb-5 text-lightGreen">
+        <h1>About the project</h1>
+      </div>
+
+      <p class="text-start m-5 fs-5 text-center">This is my project for the individual Project Assignment for the Spring Advanced Course at SoftUni. I chose this topic because I’ve always been fascinated by the wonders of the universe. The project aims to take the user on an adventure around our solar system and introduce him to the captivating world that lays beyond our planet. Once the user registers, he will have access to all the community’s posts, and you will be able to post too. As the name of the projects suggests, I will continue expanding it and add new information and features in the future. Let me know if you have any questions or suggestions. I hope you like my little project and hopefully you learn something new.</p>
+    </div>
+  </section>
+</main>
+    
+
+    <footer th:replace="fragments/commons::footer">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/commons::head">
+</head>
+<body>
+<header th:replace="fragments/commons::header">
+</header>
+
+<section>
+    <div id="test" class="container-lg mt-5 mb-5 pt-5">
+        <div id="picture" class="row justify-content-center">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 1663 620">
+                <image class="img-fluid" width="1663" height="620" xlink:href="images\index.png"></image>
+                <a xlink:href="/planets/sun">
+                    <rect id="theSun" onmouseover="planet(this)" onmouseout="normal()" x="38" y="192" fill="#fff"
+                          opacity="0" width="280" height="272"></rect>
+                </a><a xlink:href="/planets/mercury">
+                <rect id="mercury" onmouseover="planet(this)" onmouseout="normal()" x="359" y="301" fill="#fff"
+                      opacity="0" width="56" height="53"></rect>
+            </a><a xlink:href="/planets/venus">
+                <rect id="venus" onmouseover="planet(this)" onmouseout="normal()" x="450" y="257" fill="#fff"
+                      opacity="0" width="151" height="147"></rect>
+            </a><a xlink:href="/planets/earth">
+                <rect id="theEarth" onmouseover="planet(this)" onmouseout="normal()" x="630" y="267" fill="#fff"
+                      opacity="0" width="127" height="120"></rect>
+            </a><a xlink:href="/planets/theMoon">
+                <rect id="theMoon" onmouseover="planet(this)" onmouseout="normal()" x="779" y="305" fill="#fff"
+                      opacity="0" width="50" height="50"></rect>
+            </a><a xlink:href="/planets/mars">
+                <rect id="mars" onmouseover="planet(this)" onmouseout="normal()" x="850" y="280" fill="#fff" opacity="0"
+                      width="100" height="100"></rect>
+            </a><a xlink:href="/planets/jupiter">
+                <rect id="jupiter" onmouseover="planet(this)" onmouseout="normal()" x="984" y="238" fill="#fff"
+                      opacity="0" width="187" height="185"></rect>
+            </a><a xlink:href="/planets/saturn">
+                <rect id="saturn" onmouseover="planet(this)" onmouseout="normal()" x="1212" y="262" fill="#fff"
+                      opacity="0" width="126" height="130"></rect>
+            </a><a xlink:href="/planets/uranus">
+                <rect id="uranus" onmouseover="planet(this)" onmouseout="normal()" x="1372" y="267" fill="#fff"
+                      opacity="0" width="127" height="126"></rect>
+            </a><a xlink:href="/planets/neptune">
+                <rect id="neptune" onmouseover="planet(this)" onmouseout="normal()" x="1537" y="270" fill="#fff"
+                      opacity="0" width="119" height="124"></rect>
+            </a>
+            </svg>
+        </div>
+    </div>
+    <h2 id="text-to-change" class="text-center text-darkGreen mt-5">Click or touch an object to explore</h2>
+</section>
+
+
+<footer th:replace="fragments/commons::footer">
+</footer>
+
+<script src="/js/register.js"></script>
+<script src="/js/test.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

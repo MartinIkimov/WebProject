@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="fragments/commons::head">
+  </head>
+  <body>
+    <header th:replace="fragments/commons::header">
+  </header>
+
+  <main class="mb-5">
+    <div class="container text-lightGreen mb-5">
+      <div class="row align-items-center">
+        <div class="col text-center">
+          <h1 class="fw-bold mb-5 display-3">Jupiter</h1>
+          <h2 class="mt-5 pt-2 fst-italic">Jupiter is a massive planet, twice the size of all other planets combined and has a centuries-old storm that is bigger than Earth.</h2>
+        </div>
+        <div id="canvasContainer" class="col">
+          <canvas height="700"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    
+
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">King of the Gods</h3>
+      <p>Our first stop in the Jovian system is a truly awesome sight. It is a gaseous planet of enormous proportions. This is the planet Jupiter. It is the fifth planet from the Sun and is the largest. It is also In fact, Jupiter is almost twice the size of all of the other planets combined. Over one thousand Earths could fit inside if it were hollow. Because of its gigantic size, Jupiter was named after the king of the gods in Roman mythology. In Greek mythology, he was known as Zeus, and was famous for hurling lightning bolts at earthbound mortals.</p>
+      <p>Jupiter is the fourth brightest object in the sky, so it has been known to exist since prehistoric times. It was Galileo who discovered Jupiter's four largest moons, Callisto, Europa, Ganymede, and Io, in 1610. We now know of 79 moons in orbit around Jupiter, ranging in size from just a few miles across to nearly Earth-sized. The Jovian system is like a miniature solar system within a solar system. With so many satellites tugging on Jupiter with their tidal forces, these moons are actually causing Jupiter's rotation to slow down. These same tidal forces are also pushing the moons farther away from the massive planet.</p>
+      <div class="d-flex justify-content-evenly mb-5 mt-4">
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/jupiter04_sk12.jpg" class="card-img-top" alt="Jupiter's red spot">
+          <div class="card-body">
+            <p class="card-text text-center">Voyager 2 closeup of Jupiter's famous red spot</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/jupiter06_sk12.jpg" class="card-img-top" alt="Jupiter's moon">
+          <div class="card-body">
+            <p class="card-text text-center">Galileo image of Jupiter's moon Io</p>
+          </div>
+        </div>
+        <div class="card bg-altGrey" style="width: 15rem;">
+          <img src="/images/jupiter05_sk12.jpg" class="card-img-top" alt="Jupiter's moon lo">
+          <div class="card-body">
+            <p class="card-text text-center">Galileo image of Jupiter's moon Io</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">The Famous Red Spot</h3>
+      <p>Perhaps the most famous feature of Jupiter is its giant red spot. This spot is actually a gigantic storm system. This large blemish is a high-pressure region where the winds blow in a counter-clockwise direction at over 250 miles (402 km) per hour. The cloud tops are much higher and colder than the surrounding clouds. This accounts for the spot's darker color. With a diameter of more than 16,000 miles (25,000 km), this storm is twice the size of the Earth!  Many spots and colorful bands appear and disappear in Jupiter's turbulent atmosphere, but the great red spot has been know to exist for more than 300 years. Astronomers do not yet know what forces have kept this storm together for so long. And nobody knows just how much longer it will last.</p>
+      <p>Spots of a different kind were seen in 1994 when a comet named Shoemaker-Levy 9 smashed into the planet. The comet had broken into 21 separate fragments as a result of a close encounter with Jupiter's massive gravitational forces. On July 16 1994, for seven days, these fragments bombarded the giant planet. The impacts left monstrous black scars on the Jupiter's surface. Explosive plumes several times the size of Earth were observed, and the dark scars remained visible on the planet for nearly a year. It was one of the most watched astronomical events in history, and it proved once and for all that comets do hit planets.</p>
+      <div class="d-flex justify-content-center mb-3">
+        <img src="/images/jupiter07_sk12.jpg" class="img-fluid mt-4" style="width: 800px" alt="cloud bands">
+      </div>
+      <p class="text-center mb-5">Mosaic image created by the Cassini spacecraft showing details of Jupiter's cloud bands. The great red spot can be seen in addition to several other storms visible as smaller round spots.</p>
+
+      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Jupiter</h3>
+      <p>Jupiter has amazed and intrigued astronomers for centuries. It has been visited by a total of six spacecraft, including the current Galileo mission. In 1995, Galileo dropped a probe into Jupiter's atmosphere. The probe took measurements and gave us our first clues as to what was inside Jupiter's thick atmosphere. With this data, and data collected on previous missions, we now know that Jupiter is essentially a gigantic ball of gas. The planet is composed mainly of hydrogen, with helium and traces amounts of other gases. One surprising find was that there is much less water in Jupiter's atmosphere than previously expected. Astronomers believe that Jupiter has no solid surface. Instead the gases get thicker and denser as they get closer to the planet's center. The extreme pressure at Jupiter's core compresses the hydrogen into a rare liquid metallic state. The planet may also have a small, rocky core about 10 times the size of Earth.</p>
+      <p>Jupiter's outer atmosphere is extremely dynamic. Colorful bands and spots can be see rotating and changing regularly. The colors in the bands are believed to be the result of chemical reactions in the atmosphere. The Galileo probe measured wind speeds exceeding 400 miles (643 km) per hour.</p>
+      <p>A big surprise revealed by the Voyager 1 spacecraft was that Jupiter has rings, much like Saturn. But unlike Saturn's rings, Jupiter's rings are very delicate and simple. These rings are divided into three main segments, and were not known to exist prior to Voyager's discovery because they are too thin to be seen from Earth.</p>
+      <p>One other item in Jupiter's long list of oddities is its magnetic field. It is so strong that is actually extends past the orbit of Saturn. In fact, it is 4000 times stronger than Earth's magnetic field. Even stranger still is the fact that Jupiter's rotation is so fast - only 9.8 Earth hours - that the planet actually bulges out in the center. A close examination of any Jupiter photo will reveal that the planet is more oval shaped than round.</p>
+
+      <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
+        <div class="row row-cols-1 text-center pb-3">
+          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Jupiter</h3>
+          <p>Diameter = 142,984 km (88,823 miles)</p>
+          <p>Known Natural Satellites = 64</p>
+          <p>Mean Distance from the Sun = 778,330,000 km (482,546,000 miles)</p>
+          <p>Rotational Period = 9.84 hours</p>
+          <p>Orbital Period = 4333 days</p>
+          <p>Orbital Eccentricity =0.0483</p>
+          <p>Orbital Inclination = 1.308 degrees</p>
+          <p>Inclination of Axis = 3.12 degrees</p>
+          <p>Mean Cloud Temperature = -121° C (-185° F)</p>
+          <p>Main Atmospheric Component = Hydrogen</p>
+          <p>Atmospheric Pressure = 0.7 bars</p>
+          <p>Atmospheric Depth = 161 km (100 miles)</p>
+          <p>Apparent Magnitude = -2.7</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid bg-altBlack">
+    <section>
+      <ul class="hstack gap-3 justify-content-center m-0 p-0">
+          <li class="">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li> 
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </li>
+          <li>
+              <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+      </ul>
+  </section>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script type="module" src="/js/jupiter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

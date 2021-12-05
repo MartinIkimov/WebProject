@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<body>
+<header th:replace="fragments/commons::header">
+</header>
+
+<main class="mb-5">
+    <div class="container text-lightGreen mb-5">
+        <div class="row align-items-center">
+            <div class="col text-center">
+                <h1 class="fw-bold mb-5 display-3">Earth</h1>
+                <h2 class="mt-5 pt-2 fst-italic">The place we call home, Earth is the third rock from the sun and the
+                    only planet with known life on it – and lots of it too!</h2>
+            </div>
+            <div id="canvasContainer" class="col">
+                <canvas height="700"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
+        <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">The Blue Planet</h3>
+        <p>Our first stop in the Terran system is a small planet that could only be described as the most beautiful
+            sight in the entire solar system. Sparkling before us is a bright blue gem of dazzling complexity. Delicate
+            white clouds dance above its surface of brilliant blues, greens, and browns. This is the planet Earth. It is
+            the third planet from the Sun, and it is our home. Only slightly larger than Venus, Earth is the largest of
+            the four terrestrial, or rocky inner planets in the Solar System. It is also the densest of the four.</p>
+        <p>There are two very important factors that distinguish this planet from all others in the Solar System. First,
+            it is the only planet known to contain liquid water on its surface. It is the availability of this water
+            that gives rise to Earth's second unique feature. It is the only known planet to support life!</p>
+        <div class="d-flex justify-content-evenly mb-5 mt-4">
+            <div class="card bg-altGrey" style="width: 15rem;">
+                <img src="/images/earth05_sk12.jpg" class="card-img-top" alt="Sun Img">
+                <div class="card-body">
+                    <p class="card-text text-center">Apollo 16 closeup photo of Earth showing North America</p>
+                </div>
+            </div>
+            <div class="card bg-altGrey" style="width: 15rem;">
+                <img src="/images/earth06_sk12.jpg" class="card-img-top" alt="Sun Img">
+                <div class="card-body">
+                    <p class="card-text text-center"> Hurricane Isabel as seen from the International Space Station</p>
+                </div>
+            </div>
+            <div class="card bg-altGrey" style="width: 15rem;">
+                <img src="/images/earth04_sk12.jpg" class="card-img-top" alt="Sun Img">
+                <div class="card-body">
+                    <p class="card-text text-center">Galileo spacecraft image showing Africa & the Arabian peninsula</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Planet of Life</h3>
+        <p>The surface of Earth is literally covered with water. Nearly 3/4 of the planet's surface is liquid water.
+            Water is also found in abundance as ice in the planet's poles and as water vapor in the atmosphere. Most of
+            this water was thought to have been deposited by billions of years of volcanic activity. Some scientists
+            believe that water may also have been brought to Earth by early comets. It is this water, combined with
+            Earth's perfect distance from the Sun, that has given rise to the Solar System's only known life forms.</p>
+        <p>The atmosphere also played an important factor, providing the right mixture of gases and helping to protect
+            the surface from meteor impacts. Because of these perfect conditions, Earth has evolved an unimaginable
+            diversity of millions of different life forms. Life on Earth has adapted to all types of environments,
+            including the land, oceans, and air. At least one of these has become self-aware and has begun to explore
+            its surroundings. We humans have become the first form of life to leave their planetary home and explore the
+            universe.</p>
+        <div class="d-flex justify-content-center mb-3">
+            <img src="/images/earth07_sk12.jpg" class="img-fluid mt-4" style="width: 800px" alt="sun spot">
+        </div>
+        <p class="text-center mb-5">The Sun reflects off the Earth's vast, blue oceans in this stunning image captured
+            by the space shuttle. Earth is the only planet in the Solar System known to have liquid water on its
+            surface.</p>
+
+        <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Earth</h3>
+        <p>Earth is a rocky world that is still very much alive and active. Volcanic activity continually creates new
+            land while earthquakes reshape the landscape. Earth's surface is constantly changing. The crust is divided
+            up into several "plates" (somewhat like a cracked eggshell) that float on a sea of molten rock. Where these
+            plates collide, the land is thrust upwards to create enormous mountain ranges. The tallest of these
+            mountains, Mt. Everest, rises 29,028 feet (8850 m) above sea level. In some places, one plate sinks
+            underneath another forming deep valleys and trenches. The deepest of these, the Marianas trench, plunges
+            seven miles (11 km) beneath the sea.</p>
+        <p>Uneven heating of Earth's atmosphere, combined with its rotation causes complex weather patterns. Wind and
+            rain gradually erode the mountains and create vast sandy plains. Even though the planet was bombarded by
+            asteroids and meteors throughout its early history, erosion has wiped out most of the craters. Some can
+            still be found, however. Meteor crater in Arizona is over a mile (1.6 km) wide and almost 600 feet (183 m)
+            deep. It is believed that large meteors may have caused mass extinctions throughout Earth's history. One of
+            these may have been responsible for wiping out the dinosaurs. Although the planet may seem calm and tranquil
+            now, its surface is highly active and ever changing on the wider geologic scale of time.</p>
+
+        <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
+            <div class="row row-cols-1 text-center pb-3">
+                <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Earth</h3>
+                <p>Diameter = 12,756 km (7,924 miles)</p>
+                <p>Number of Natural Satellites = 1</p>
+                <p>Mean Distance from the Sun = 149,600,000 km
+                    (92,933,000 miles)</p>
+                <p>Rotational Period = 23 hrs, 56 min</p>
+                <p>Orbital Period = 365.2 days</p>
+                <p>Orbital Eccentricit = 0.017</p>
+                <p>Orbital Inclination = 0 degrees</p>
+                <p>Inclination of Axis = 23.45 degrees</p>
+                <p>Mean Surface Temperature = 15° C (59° F)</p>
+                <p>Main Atmospheric Component = Nitrogen</p>
+                <p>Atmospheric Pressure = 1.013 bars</p>
+                <p>Atmospheric Depth = 193 km (120 miles)</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container-fluid bg-altBlack">
+    <section>
+        <ul class="hstack gap-3 justify-content-center m-0 p-0">
+            <li class="">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </section>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+<script type="module" src="/js/earth.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

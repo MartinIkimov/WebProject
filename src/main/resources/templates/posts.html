@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header th:replace="fragments/commons::header"></header>
+
+<main>
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack mb-5">
+        <div th:each="p : ${posts}" th:object="${p}">
+            <div class="row border-bottom border-top border-altGreyLight justify-content-start">
+                <div class="col-auto mx-4">
+                    <a th:href="@{//profile/id}">
+                        <h3 class="mt-3 text-lightGreen" th:text="*{author.getUsername()}"></h3>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a th:href="@{/posts/{id}/details(id=*{id})}">
+                        <h3 class="mt-3 text-lightGreen" th:text="*{title}"></h3>
+                    </a>
+                </div>
+            </div>
+            <a th:href="@{/posts/{id}/details(id=*{id})}">
+                <p class="m-3 text-white" th:text="${#strings.abbreviate(p.getDescription(), 200)}"></p>
+                <div class="d-flex justify-content-center">
+                    <img th:if="*{media} != null" class="img-fluid" th:src="*{media.getUrl()}" style="height: 250px" alt="Title image">
+                </div>
+            </a>
+
+            <div class="row">
+                <div class="d-flex justify-content-end">
+                    <a th:each="c : *{categories}" class="rounded bg-altGrey text-lightGreen m-2 p-2"
+                       th:href="@{/category/name}"
+                       th:text="${c.getName()}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container-fluid bg-altBlack">
+    <section>
+        <ul class="hstack gap-3 justify-content-center m-0 p-0">
+            <li class="">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>
