@@ -3,6 +3,8 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head th:fragment="head">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ever Expanding</title>
@@ -18,7 +20,7 @@
 <header th:fragment="header">
     <nav id="bg-altBlack" class="navbar navbar-expand-lg navbar-dark bg-altBlack mb-5">
         <div class="container-fluid">
-            <a class="navbar-brand text-darkGreen fs-2" href="index.html">Ever Expanding</a>
+            <a class="navbar-brand text-darkGreen fs-2" th:href="@{/}">Ever Expanding</a>
             <button class="navbar-toggler bg-darkGreen" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">

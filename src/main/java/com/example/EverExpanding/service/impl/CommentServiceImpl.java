@@ -2,6 +2,7 @@ package com.example.EverExpanding.service.impl;
 
 import com.example.EverExpanding.model.entity.Comment;
 import com.example.EverExpanding.model.entity.Post;
+import com.example.EverExpanding.model.entity.UserEntity;
 import com.example.EverExpanding.model.service.CommentServiceModel;
 import com.example.EverExpanding.model.view.CommentViewModel;
 import com.example.EverExpanding.repository.CommentRepository;
@@ -9,11 +10,13 @@ import com.example.EverExpanding.service.CommentService;
 import com.example.EverExpanding.service.PostService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.util.RouteMatcher;
 
 import javax.transaction.Transactional;
 import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,19 +45,41 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public CommentViewModel createComment(CommentServiceModel serviceModel, Principal principal) {
-        Comment newComment = modelMapper.map(serviceModel, Comment.class);
-        newComment.setAuthor(userService.findByEmail(principal.getName()));
-        newComment.setUser(newComment.getAuthor().getUsername());
-        newComment.setCreated(LocalDateTime.now());
-        CommentViewModel comment = modelMapper.map(serviceModel, CommentViewModel.class);
-        comment.setUser(userService.findByEmail(principal.getName()).getUsername());
-        commentRepository.save(newComment);
-        return comment;
+    public CommentViewModel createComment(CommentServiceModel serviceModel) {
+        Objects.requireNonNull(serviceModel.getCreator());
+
+        //TODO objectNotFound
+
+        Post post = postService.findPostById(serviceModel.getPostId());
+        UserEntity author = userService.findByEmail(serviceModel.getCreator());
+
+        Comment comment = new Comment();
+        comment.setMessage(serviceModel.getMessage());
+        comment.setCreated(LocalDateTime.now());
+        comment.setPost(post);
+        comment.setAuthor(author);
+        comment.setUser(author.getUsername());
+
+        Comment saved = commentRepository.save(comment);
+
+        return mapAsComment(saved);
     }
 
     @Override
     public Long findByEmailAndTextMessage(String name, String message) {
         return commentRepository.findCommentByAuthorAndMessage(userService.findByEmail(name), message).getId();
+    }
+
+    private CommentViewModel mapAsComment(Comment comment) {
+        CommentViewModel commentViewModel = new CommentViewModel();
+
+        commentViewModel.setCommentId(comment.getId());
+        commentViewModel.setCanApprove(true);
+        commentViewModel.setCanDelete(true);
+        commentViewModel.setCreated(comment.getCreated());
+        commentViewModel.setMessage(comment.getMessage());
+        commentViewModel.setUser(comment.getAuthor().getUsername());
+
+        return commentViewModel;
     }
 }

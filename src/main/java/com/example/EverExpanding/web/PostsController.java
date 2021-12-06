@@ -53,7 +53,12 @@ public class PostsController {
              media = createMediaEntity(postBindingModel.getMultipartFile());
             mediaService.saveMedia(media);
         }
-        postService.savePost(modelMapper.map(postServiceModel, PostServiceModel.class), principal.getName(), media.getId());
+        if(media != null) {
+            postService.savePost(modelMapper.map(postServiceModel, PostServiceModel.class), principal.getName(), media.getId());
+        } else {
+            postService.savePost(modelMapper.map(postServiceModel, PostServiceModel.class), principal.getName(), null);
+        }
+
 
         return "redirect:/posts/all";
     }

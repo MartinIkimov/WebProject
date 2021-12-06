@@ -9,7 +9,7 @@ import java.util.List;
 public interface CommentService {
     List<CommentViewModel> getComments(Long routeId);
 
-    CommentViewModel createComment(CommentServiceModel serviceModel, Principal principal);
+    CommentViewModel createComment(CommentServiceModel serviceModel);
 
     Long findByEmailAndTextMessage(String name, String message);
 }
