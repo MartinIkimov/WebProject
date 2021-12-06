@@ -73,7 +73,7 @@ public class UserEntity extends BaseEntity{
         this.roles = roles;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "author")
     public List<Post> getPosts() {
         return posts;
     }

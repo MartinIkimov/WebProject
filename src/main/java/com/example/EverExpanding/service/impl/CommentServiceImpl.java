@@ -15,6 +15,7 @@ import org.springframework.util.RouteMatcher;
 import javax.transaction.Transactional;
 import java.security.Principal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -46,6 +47,10 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentViewModel createComment(CommentServiceModel serviceModel) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = now.format(formatter);
+
         Objects.requireNonNull(serviceModel.getCreator());
 
         //TODO objectNotFound
@@ -55,7 +60,7 @@ public class CommentServiceImpl implements CommentService {
 
         Comment comment = new Comment();
         comment.setMessage(serviceModel.getMessage());
-        comment.setCreated(LocalDateTime.now());
+        comment.setCreated(LocalDateTime.parse(formatDateTime, formatter));
         comment.setPost(post);
         comment.setAuthor(author);
         comment.setUser(author.getUsername());

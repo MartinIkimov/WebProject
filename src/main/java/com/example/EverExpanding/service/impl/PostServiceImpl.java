@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -37,6 +38,11 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void savePost(PostServiceModel postServiceModel, String email, Long id) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = now.format(formatter);
+
+
         Post post = modelMapper.map(postServiceModel, Post.class);
         post.setAuthor(userService.findByEmail(email));
         String[] categories = postServiceModel.getCategories().split(", ");
@@ -48,7 +54,8 @@ public class PostServiceImpl implements PostService {
             categoryService.saveCategory(cat);
         }
         post.setCategories(categoryList);
-        post.setCreatedOn(LocalDateTime.now());
+        post.setCreatedOn(LocalDateTime.parse(formatDateTime, formatter));
+
         if(id != null) {
             post.setMedia(mediaService.findMediaById(id));
         }

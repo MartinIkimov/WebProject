@@ -68,8 +68,6 @@ public class Post extends BaseEntity{
     }
 
 
-
-
     @OneToMany(mappedBy = "post")
     public List<Comment> getComments() {
         return comments;

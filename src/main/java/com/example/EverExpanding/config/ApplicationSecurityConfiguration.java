@@ -29,6 +29,7 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
                         requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll().
                 // the next line allows access to the home page, login page and registration and planets for everyone
                         antMatchers("/", "/users/register", "/planets/**", "/users/login", "/about", "/error").permitAll().
+                        antMatchers("/admin").hasRole("ADMIN").
 //                antMatchers("/posts/**").permitAll().
                 // next we forbid all other pages for unauthenticated users.
                         antMatchers("/**").authenticated().

@@ -11,10 +11,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -46,6 +43,12 @@ public class PostsController {
 
     @PostMapping("/add")
     public String addPost(@Valid PostBindingModel postBindingModel, BindingResult bindingResult, RedirectAttributes redirectAttributes, Principal principal) throws IOException {
+        if(bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("postModel", postBindingModel);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.postModel", bindingResult);
+            return "redirect:add";
+        }
+
         PostServiceModel postServiceModel = modelMapper.map(postBindingModel, PostServiceModel.class);
         MediaEntity media = null;
 
@@ -60,7 +63,7 @@ public class PostsController {
         }
 
 
-        return "redirect:/posts/all";
+        return "redirect:all";
     }
 
     @GetMapping("/all")
@@ -71,7 +74,7 @@ public class PostsController {
     }
 
     @GetMapping("/{id}/details")
-    public String postDetails(Model model, @PathVariable Long id, Principal principal) {
+    public String postDetails(Model model, @PathVariable Long id) {
         model.addAttribute("post", this.postService.findById(id));
         return "post-details";
     }
@@ -87,4 +90,8 @@ public class PostsController {
     }
 
 
+    @ModelAttribute("postModel")
+    public PostBindingModel postBindingModel() {
+        return new PostBindingModel();
+    }
 }

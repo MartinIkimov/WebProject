@@ -2,6 +2,7 @@ package com.example.EverExpanding.model.binding;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class PostBindingModel {
@@ -13,7 +14,7 @@ public class PostBindingModel {
     public PostBindingModel() {
     }
 
-    @NotNull
+    @NotBlank
     public String getTitle() {
         return title;
     }
@@ -22,7 +23,7 @@ public class PostBindingModel {
         this.title = title;
     }
 
-    @NotNull
+    @NotBlank
     public String getCategories() {
         return categories;
     }
@@ -31,7 +32,7 @@ public class PostBindingModel {
         this.categories = categories;
     }
 
-    @NotNull
+    @NotBlank
     public String getDescription() {
         return description;
     }
@@ -40,7 +41,6 @@ public class PostBindingModel {
         this.description = description;
     }
 
-    @NotNull
     public MultipartFile getMultipartFile() {
         return multipartFile;
     }
