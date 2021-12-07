@@ -79,6 +79,7 @@ public class UserController {
         return "redirect:/";
     }
 
+    @Transactional
     @GetMapping("/profile")
     public String profile(Principal principal, Model model) {
         UserViewModel userViewModel = modelMapper.map(userService.findByEmail(principal.getName()), UserViewModel.class);

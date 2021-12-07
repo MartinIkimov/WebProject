@@ -230,10 +230,22 @@ nav ul li {
 }
 
 
- a {
+a {
     text-decoration: none;
 }
 
 body {
     padding-bottom: 70px;
+}
+
+/*#navbarNav > ul > div > ul > li > a:hover {*/
+/*    background-image:none !important;*/
+/*}*/
+
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-image:none !important;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color:#6A6E70;
 }
