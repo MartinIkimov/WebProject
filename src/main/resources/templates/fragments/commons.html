@@ -34,7 +34,7 @@
                             <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" th:href="@{/admin}">Admin</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" href="#">Profile</a>
+                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" th:href="@{/users/profile}">Profile</a>
                         </li>
                         <li class="nav-item m-2">
                             <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2"
@@ -46,7 +46,6 @@
                         </li>
                         <li class="nav-item m-2">
                             <form th:action="@{/users/logout}" th:method="post" id="form2" class="container">
-                                <!--                                <a th:href="@{/users/logout}" id="myLink" class="nav-link active text-darkGreen fs-4 text-center px-2" type="submit">Logout</a>-->
                                 <a href="javascript:;" class="nav-link active text-darkGreen fs-4 text-center px-2" onclick="document.getElementById('form2').submit();"><span>Logout</span></a>
                             </form>
                         </li>

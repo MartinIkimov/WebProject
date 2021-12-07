@@ -64,7 +64,7 @@ public class UserEntity extends BaseEntity{
         this.profilePicture = profilePicture;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     public List<Role> getRoles() {
         return roles;
     }
@@ -73,7 +73,7 @@ public class UserEntity extends BaseEntity{
         this.roles = roles;
     }
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     public List<Post> getPosts() {
         return posts;
     }

@@ -233,3 +233,7 @@ nav ul li {
  a {
     text-decoration: none;
 }
+
+body {
+    padding-bottom: 70px;
+}

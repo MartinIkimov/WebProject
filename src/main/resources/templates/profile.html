@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<body>
+<header th:replace="fragments/commons::header"></header>
+
+<main class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack align-content-center mb-5" style="width: 500px">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <div class="profile-card p-3 py-4" th:object="${profile}">
+                <div class="text-center">
+                    <img src="/images/user_photo.png" width="100" class="rounded-circle">
+                </div>
+                <div class="text-center mt-3">
+                    <span class="bg-altGreyLight p-1 px-4 rounded text-white" th:if="*{roles.size() == 2}">Admin</span>
+                    <span class="bg-altGreyLight p-1 px-4 rounded text-white" th:if="*{roles.size() == 1}">User</span>
+                    <h5 class="mt-4 mb-2">Username</h5>
+                    <span th:text="*{username}"></span>
+                    <h5 class="mt-2 mb-2">Likes</h5>
+                    <span th:text="*{likes}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section>
+    <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack mb-5" th:object="${profile}">
+        <h5 class="mt-4 mb-0 text-center">Posts:</h5>
+        <div th:each="p : *{posts}">
+            <div class="row border-bottom border-top border-altGreyLight justify-content-start">
+                <div class="col-auto mx-4">
+                    <a th:href="@{/profile/id}">
+                        <h3 class="mt-3 text-lightGreen" th:text="${p.getAuthor().getUsername()}"></h3>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a th:href="@{/posts/{id}/details(id=${p.id})}">
+                        <h3 class="mt-3 text-lightGreen" th:text="${p.title}"></h3>
+                    </a>
+                </div>
+            </div>
+            <a th:href="@{/posts/{id}/details(id=${p.id})}">
+                <p class="m-3 text-white" th:text="${#strings.abbreviate(p.getDescription(), 200)}"></p>
+                <div class="d-flex justify-content-center">
+                    <img th:if="${p.media} != null" class="img-fluid" th:src="${p.media.getUrl()}" style="height: 250px" alt="Title image">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="fragments/commons::footer">
+</footer>
+</body>
+</html>

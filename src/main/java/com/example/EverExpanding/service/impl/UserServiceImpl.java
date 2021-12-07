@@ -3,6 +3,7 @@ package com.example.EverExpanding.service.impl;
 import com.example.EverExpanding.model.entity.UserEntity;
 import com.example.EverExpanding.model.entity.enums.RoleNameEnum;
 import com.example.EverExpanding.model.service.UserServiceModel;
+import com.example.EverExpanding.model.view.UserViewModel;
 import com.example.EverExpanding.repository.UserRepository;
 import com.example.EverExpanding.service.RoleService;
 import com.example.EverExpanding.service.UserService;
@@ -15,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -70,10 +72,19 @@ public class UserServiceImpl implements UserService {
         return userRepository.existsByEmail(email);
     }
 
+    @Transactional
     @Override
     public UserEntity findByEmail(String email) {
         // TODO or else throw with custom error
         return userRepository.findByEmail(email).orElse(null);
+    }
+
+    @Transactional
+    @Override
+    public UserViewModel findById(Long id) {
+        UserEntity user = userRepository.findById(id).orElse(null);
+
+        return modelMapper.map(user, UserViewModel.class);
     }
 
 }
