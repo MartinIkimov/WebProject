@@ -1,5 +1,7 @@
 package com.example.EverExpanding.model.view;
 
+import org.springframework.scheduling.annotation.Scheduled;
+
 public class StatsViewModel {
 
     private final int authRequests;
@@ -9,7 +11,7 @@ public class StatsViewModel {
         this.authRequests = authRequests;
         this.anonRequests = anonRequests;
     }
-
+    
     public int getTotalRequests() {
         return anonRequests + authRequests;
     }

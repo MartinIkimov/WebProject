@@ -10,6 +10,7 @@ import com.example.EverExpanding.service.MediaService;
 import com.example.EverExpanding.service.PostService;
 import com.example.EverExpanding.service.UserService;
 import org.modelmapper.ModelMapper;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 
@@ -64,14 +65,13 @@ public class PostServiceImpl implements PostService {
 
     @Transactional
     @Override
+    @Cacheable("cachedPosts")
     public List<PostViewModelSummary> getAllPosts() {
-        List<Post> test = postRepository.findAll();
-        List<PostViewModelSummary> posts = postRepository.findAll()
+
+        return postRepository.findAll()
                 .stream()
                 .map(p -> modelMapper.map(p, PostViewModelSummary.class))
                 .collect(Collectors.toList());
-
-        return posts;
     }
 
     @Transactional

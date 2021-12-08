@@ -21,8 +21,8 @@ public class HomeController {
         return "about";
     }
 
-    @GetMapping("/admin")
-    public String admin() {
-        return "admin";
+    @GetMapping("/language")
+    public String home() {
+        return "languageTest";
     }
 }
