@@ -29,37 +29,38 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    <div class="dropdown nav-item m-2">
+                        <a th:text="#{languageChange}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2 dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+
+                        <ul class="dropdown-menu bg-altGrey text-center" aria-labelledby="dropdownMenuLink2">
+                            <li>
+                                <form th:method="get">
+                                    <label class="text-lightGreen mb-3" th:text="#{language}" for="lang"></label>
+                                    <select class="bg-altGrey text-lightGreen"
+                                            onchange="this.form.submit()"
+                                            id="lang"
+                                            name="lang">
+                                        <ul>
+                                            <li>
+                                                <option value="en_US" th:selected="${#locale.toString()} == 'en_US'">English</option>
+                                            </li>
+                                            <li>
+                                                <option value="bg_BG" th:selected="${#locale.toString()} == 'bg_BG'">Български</option>
+                                            </li>
+                                        </ul>
+
+                                    </select>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                     <th:block sec:authorize="isAuthenticated()">
 <!--                        <li class="nav-item m-2" sec:authorize="hasRole('ADMIN')">-->
 <!--                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" th:href="@{/admin}">Admin</a>-->
 <!--                        </li>-->
-                        <div class="dropdown nav-item m-2">
-                            <a th:text="#{languageChange}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2 dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Language
-                            </a>
 
-                            <ul class="dropdown-menu bg-altGrey text-center" aria-labelledby="dropdownMenuLink2">
-                                <li>
-                                    <form th:method="get">
-                                        <label class="text-lightGreen mb-3" th:text="#{language}" for="lang"></label>
-                                        <select class="bg-altGrey text-lightGreen"
-                                                onchange="this.form.submit()"
-                                                id="lang"
-                                                name="lang">
-                                            <ul>
-                                                <li>
-                                                    <option value="en_US" th:selected="${#locale.toString()} == 'en_US'">English</option>
-                                                </li>
-                                                <li>
-                                                    <option value="bg_BG" th:selected="${#locale.toString()} == 'bg_BG'">Български</option>
-                                                </li>
-                                            </ul>
-
-                                        </select>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
                         <div class="dropdown nav-item m-2" sec:authorize="hasRole('ADMIN')">
                             <a th:text="#{admin}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 Admin
@@ -88,15 +89,16 @@
                     </th:block>
 
                     <th:block sec:authorize="!isAuthenticated()">
+
                         <li class="nav-item m-2">
-                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" th:href="@{/about}">About</a>
+                            <a th:text="#{about}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2" th:href="@{/about}">About</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2"
+                            <a th:text="#{login}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2"
                                th:href="@{/users/login}">Login</a>
                         </li>
                         <li class="nav-item m-2">
-                            <a class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2"
+                            <a th:text="#{register}" class="nav-link active text-darkGreen fs-4 text-center mx-2 px-2"
                                th:href="@{/users/register}">Register</a>
                         </li>
                     </th:block>

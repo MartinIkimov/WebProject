@@ -16,9 +16,9 @@
                 <div class="text-center mt-3">
                     <span class="bg-altGreyLight p-1 px-4 rounded text-white" th:if="*{roles.size() == 2}">Admin</span>
                     <span class="bg-altGreyLight p-1 px-4 rounded text-white" th:if="*{roles.size() == 1}">User</span>
-                    <h5 class="mt-4 mb-2">Username</h5>
+                    <h5 th:text="#{username}" class="mt-4 mb-2">Username</h5>
                     <span th:text="*{username}"></span>
-                    <h5 class="mt-2 mb-2">Likes</h5>
+                    <h5 th:text="#{likes}" class="mt-2 mb-2">Likes</h5>
                     <span th:text="*{likes}"></span>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
 
 <section>
     <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack mb-5" th:object="${profile}">
-        <h5 class="mt-4 mb-0 text-center">Posts:</h5>
+        <h5 th:text="#{allPosts}" class="mt-4 mb-0 text-center">Posts:</h5>
         <div th:each="p : *{posts}">
             <div class="row border-bottom border-top border-altGreyLight justify-content-start">
                 <div class="col-auto mx-4">

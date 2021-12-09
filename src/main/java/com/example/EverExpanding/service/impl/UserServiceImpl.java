@@ -75,7 +75,6 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public UserEntity findByEmail(String email) {
-        // TODO or else throw with custom error
         return userRepository.findByEmail(email).orElse(null);
     }
 
@@ -83,7 +82,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserViewModel findById(Long id) {
         UserEntity user = userRepository.findById(id).orElse(null);
-
         return modelMapper.map(user, UserViewModel.class);
     }
 

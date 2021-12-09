@@ -8,23 +8,23 @@
       <section class="bg-altGrey text-white rounded border border-2 border-darkGreen position-absolute top-50 start-50 translate-middle">
         <div class="container p-0">
           <div class="text-center my-4">
-            <h2>Login</h2>
+            <h2 th:text="#{login}">Login</h2>
           </div>
           <div class="row mx-5">
             <div class="col p-0 m-2">
               <form th:action="@{/users/login}" th:method="post" id="myForm">
 
-                  <p th:if="${bad_credentials}" class="text-danger">
+                  <p th:text="#{badCredentials}" th:if="${bad_credentials}" class="text-danger">
                       Invalid username or password.
                   </p>
 
                   <div>
-                      <label for="email" class="form-label mt-3">Email</label>
+                      <label th:text="#{email}" for="email" class="form-label mt-3">Email</label>
                       <input th:value="${email}" name="email" type="text" class="form-control mb-3" id="email" placeholder="example@example.com">
                   </div>
 
                   <div>
-                      <label for="password" class="form-label mt-3">Password</label>
+                      <label th:text="#{password}" for="password" class="form-label mt-3">Password</label>
                       <input type="password" name="password" class="form-control mb-3" id="password" placeholder="Password">
                   </div>
 

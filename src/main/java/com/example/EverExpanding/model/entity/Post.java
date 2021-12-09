@@ -68,7 +68,7 @@ public class Post extends BaseEntity{
     }
 
 
-    @OneToMany(mappedBy = "post")
+    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
     public List<Comment> getComments() {
         return comments;
     }

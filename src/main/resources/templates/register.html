@@ -8,50 +8,50 @@
   <section class="bg-altGrey text-white rounded border border-2 border-darkGreen position-absolute top-50 start-50 translate-middle">
     <div class="container">
       <div class="text-center my-5">
-        <h2>Register</h2>
+        <h2 th:text="#{register}">Register</h2>
       </div>
 
       <div class="row mx-5">
         <div class="col p-0 m-2">
           <form th:action="@{/users/register}" th:method="post" th:object="${userModel}" id="myForm">
               <p th:if="${isUsernameUnique} == false" class="text-center">
-                  <strong class="bg-blur rounded text-danger">
+                  <strong th:text="#{usernameInUser}" class="bg-blur rounded text-danger">
                       That username is already in use!
                   </strong>
               </p>
               <p th:if="${isEmailUnique} == false" class="text-center">
-                  <strong class="bg-blur rounded text-danger">
+                  <strong th:text="#{emailInUser}" class="bg-blur rounded text-danger">
                       That email is already in use!
                   </strong>
               </p>
 
               <p th:if="*{password != repeatPass}" class="text-center">
-                  <strong class="bg-blur rounded text-danger">
+                  <strong th:text="#{passwordMatch}" class="bg-blur rounded text-danger">
                       Passwords should match!
                   </strong>
               </p>
               <div>
-                  <label for="username" class="form-label">Username:</label>
+                  <label th:text="#{username}" for="username" class="form-label">Username:</label>
                   <input th:field="*{username}" th:errorclass="is-invalid" id="username" name="username" type="text" class="form-control" placeholder="Username">
-                  <small id="usernameError"
+                  <small th:text="#{usernameLength}" id="usernameError"
                          class="invalid-feedback">Username must be between 3 and 256 characters</small>
               </div>
             <div>
-                <label for="email" class="form-label mt-3">Email address:</label>
+                <label th:text="#{email}" for="email" class="form-label mt-3">Email address:</label>
                 <input th:field="*{email}" th:errorclass="is-invalid" type="text" name="email" class="form-control" id="email" placeholder="name@example.com">
-                <small id="emailError"
+                <small th:text="#{emailInvalid}" id="emailError"
                        class="invalid-feedback">Enter a valid email</small>
             </div>
               <div>
-                  <label for="password" class="form-label mt-3">Password</label>
+                  <label th:text="#{password}" for="password" class="form-label mt-3">Password</label>
                   <input type="password" th:errorclass="is-invalid" name="password" class="form-control" id="password" placeholder="Password">
-                  <small th:field="*{password}" id="passwordError"
+                  <small th:text="#{passwordEmpty}" th:field="*{password}" id="passwordError"
                          class="invalid-feedback">Password is required</small>
               </div>
               <div>
-                  <label for="repeatPass" class="form-label mt-3">Repeat password</label>
+                  <label th:text="#{repeatPassword}" for="repeatPass" class="form-label mt-3">Repeat password</label>
                   <input th:field="*{repeatPass}" th:errorclass="is-invalid" type="password" name="repeatPass" class="form-control" id="repeatPass" placeholder="Repeat Password">
-                  <small id="repeatPassError"
+                  <small th:text="#{rePassEmpty}" id="repeatPassError"
                          class="invalid-feedback">Repeat password is required</small>
               </div>
 

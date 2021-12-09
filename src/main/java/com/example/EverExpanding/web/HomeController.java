@@ -20,9 +20,4 @@ public class HomeController {
     public String about() {
         return "about";
     }
-
-    @GetMapping("/language")
-    public String home() {
-        return "languageTest";
-    }
 }
