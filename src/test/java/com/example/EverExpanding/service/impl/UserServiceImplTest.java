@@ -3,6 +3,7 @@ package com.example.EverExpanding.service.impl;
 import com.example.EverExpanding.model.entity.Role;
 import com.example.EverExpanding.model.entity.UserEntity;
 import com.example.EverExpanding.model.entity.enums.RoleNameEnum;
+import com.example.EverExpanding.model.service.UserServiceModel;
 import com.example.EverExpanding.model.view.UserViewModel;
 import com.example.EverExpanding.repository.RoleRepository;
 import com.example.EverExpanding.repository.UserRepository;
@@ -47,7 +48,7 @@ public class UserServiceImplTest {
     @BeforeEach
     void setUp() {
         role = new Role();
-        role.setRole(RoleNameEnum.USER);
+        role.setRole(RoleNameEnum.ADMIN);
         roleRepository.save(role);
 
         testUser = new UserEntity();
@@ -80,8 +81,32 @@ public class UserServiceImplTest {
 
     @Test
     void testFindById() {
-        UserViewModel findByEmailUser = userService.findById(1L);
+        UserViewModel findByEmailUser = userService.findById(testUser.getId());
         String emailOfFoundUser = findByEmailUser.getUsername();
         Assertions.assertEquals(emailOfFoundUser, testUser.getUsername());
+    }
+
+    @Test
+    void testUsernameExists() {
+        Assertions.assertTrue(userService.usernameExists("user"));
+    }
+
+    @Test
+    void testEmailExists() {
+        Assertions.assertTrue(userService.emailExists("user@user"));
+    }
+
+    @Test
+    void registerUserTest() {
+
+        UserServiceModel userServiceModel = new UserServiceModel();
+
+        userServiceModel.setPassword("password");
+        userServiceModel.setUsername("pesho");
+        userServiceModel.setEmail("pesho@peshev.com");
+
+        userService.registerUserAndLogin(userServiceModel);
+
+        Assertions.assertEquals(2, userRepository.count());
     }
 }
