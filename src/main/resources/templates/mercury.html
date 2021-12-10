@@ -11,8 +11,8 @@
     <div class="container text-lightGreen mb-5">
       <div class="row align-items-center">
         <div class="col text-center">
-          <h1 class="fw-bold mb-5 display-3">Mercury</h1>
-          <h2 class="mt-5 pt-2 fst-italic">The planet closest to the Sun, Mercury is the smallest and fastest planet in the solar system -- whipping around the Sun every 88 Earth days.</h2>
+          <h1 th:text="#{mercuryTitle}" class="fw-bold mb-5 display-3">Mercury</h1>
+          <h2 th:text="#{mercuryTitleText}" class="mt-5 pt-2 fst-italic">The planet closest to the Sun, Mercury is the smallest and fastest planet in the solar system -- whipping around the Sun every 88 Earth days.</h2>
         </div>
         <div id="canvasContainer" class="col">
           <canvas height="700"></canvas>
@@ -23,57 +23,57 @@
     
 
     <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Messenger of the Gods</h3>
-      <p>The next stop on our tour is a small, barren world called Mercury. It is the closest planet to the Sun and the smallest planet in the Solar System. Mercury was named after the ancient Roman messenger of the gods because it moved across the sky much faster than the other planets. In fact, Mercury completes one orbit around the Sun in only 88 days! The planet has a very slow rotational period. It takes 58 days for Mercury to make a complete rotation on its axis. Because of its close proximity to the Sun, it can only be observed in the sky in the east just before sunrise or in the west just after sunset. It never appears more than 27 degrees away from the Sun.</p>
+      <h3 th:text="#{messengerOfTheGods}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Messenger of the Gods</h3>
+      <p th:text="#{messengerOfTheGodsText}">The next stop on our tour is a small, barren world called Mercury. It is the closest planet to the Sun and the smallest planet in the Solar System. Mercury was named after the ancient Roman messenger of the gods because it moved across the sky much faster than the other planets. In fact, Mercury completes one orbit around the Sun in only 88 days! The planet has a very slow rotational period. It takes 58 days for Mercury to make a complete rotation on its axis. Because of its close proximity to the Sun, it can only be observed in the sky in the east just before sunrise or in the west just after sunset. It never appears more than 27 degrees away from the Sun.</p>
       <div class="d-flex justify-content-evenly mb-5 mt-4">
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/mecury04_sk25.jpg" class="card-img-top" alt="mercury">
           <div class="card-body">
-            <p class="card-text text-center mt-4">Messenger image of the crater Eastman</p>
+            <p th:text="#{mercuryPicOne}" class="card-text text-center mt-4">Messenger image of the crater Eastman</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/mecury05_sk25.jpg" class="card-img-top" alt="mercury crater">
           <div class="card-body">
-            <p class="card-text text-center">Messenger enhanced color image of Praxiteles crater on Mercury showing crater details</p>
+            <p th:text="#{mercuryPicTwo}" class="card-text text-center">Messenger enhanced color image of Praxiteles crater on Mercury showing crater details</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/mecury06_sk25.jpg" class="card-img-top" alt="mercury ring">
           <div class="card-body">
-            <p class="card-text text-center">Messenger spacecraft image of a 180-mile diameter double-ring crater on Mercury</p>
+            <p th:text="#{mercuryPicThree}" class="card-text text-center">Messenger spacecraft image of a 180-mile diameter double-ring crater on Mercury</p>
           </div>
         </div>
       </div>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">A Hot and Cold Barren World</h3>
-      <p>Mercury has almost no atmosphere. Scientists believe that a thicker atmosphere may have existed at one time, but was stripped away by the strong solar winds. The atmosphere on Earth helps to maintain a relatively uniform temperature around the planet. By contrast, the temperature on Mercury ranges from 800° F (427° C) during the day, to -279° F (-173° C) at night. It is indeed a very inhospitable world.</p>
+      <h3 th:text="#{aHotAndColdBarrenWorld}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">A Hot and Cold Barren World</h3>
+      <p th:text="#{aHotAndColdBarrenWorldText}">Mercury has almost no atmosphere. Scientists believe that a thicker atmosphere may have existed at one time, but was stripped away by the strong solar winds. The atmosphere on Earth helps to maintain a relatively uniform temperature around the planet. By contrast, the temperature on Mercury ranges from 800° F (427° C) during the day, to -279° F (-173° C) at night. It is indeed a very inhospitable world.</p>
       <div class="d-flex justify-content-center mb-3">
         <img src="/images/mercury07_sk25.jpg" class="img-fluid mt-4" style="width: 800px" alt="mercury cliffs">
       </div>
-      <p class="text-center mb-5">artist's rendering of rupes (cliffs) on that extend for hundreds of miles on Mercury. These giant cliffs are believed to have formed when Mercury¹s interior cooled and the entire planet shrank slightly as a result.</p>
+      <p th:text="#{aHotAndColdBarrenWorldText}" class="text-center mb-5">artist's rendering of rupes (cliffs) on that extend for hundreds of miles on Mercury. These giant cliffs are believed to have formed when Mercury¹s interior cooled and the entire planet shrank slightly as a result.</p>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Mercury</h3>
-      <p>Mercury was first visited by NASA's Mariner 10 space probe in 1974. In a series of three flybys, the probe managed to map most of the planet's surface. When the photos were received on Earth, the features might easily have been mistaken for the Moon. Mercury's surface, however, is almost completely covered with craters. The moon has more open areas known as maria, which are mostly crater-free. Mercury has only one major open area known as the Caloris Basin. These open areas are thought to have been formed by more recent volcanic flows, which may have covered the older craters. The surface is also marked by steep cliffs, also known as rupes, which rise as much as 6300 feet (1920 m) above the valley floors.</p>
-      <p>In 2008, a second spacecraft passed close to Mercury. This spacecraft was named MESSENGER, which stands for MErcury Surface, Space ENvironment, GEochemistry and Ranging. MESSENGER brought high resolution cameras to the planet and revealed many new features and new terrain not previously seen on the Mariner mission. MESSENGER is scheduled to enter orbit around Mercury in March 2011, where it will spend a full year mapping the planet's surface. New images from MESSENGER show that Mercury's surface is more homogeneous, ancient, and more heavily cratered, unlike the surfaces of the Moon and Mars.</p>
+      <h3 th:text="#{featureOfMercury}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Mercury</h3>
+      <p th:text="#{featureOfMercuryText1}">Mercury was first visited by NASA's Mariner 10 space probe in 1974. In a series of three flybys, the probe managed to map most of the planet's surface. When the photos were received on Earth, the features might easily have been mistaken for the Moon. Mercury's surface, however, is almost completely covered with craters. The moon has more open areas known as maria, which are mostly crater-free. Mercury has only one major open area known as the Caloris Basin. These open areas are thought to have been formed by more recent volcanic flows, which may have covered the older craters. The surface is also marked by steep cliffs, also known as rupes, which rise as much as 6300 feet (1920 m) above the valley floors.</p>
+      <p th:text="#{featureOfMercuryText2}">In 2008, a second spacecraft passed close to Mercury. This spacecraft was named MESSENGER, which stands for MErcury Surface, Space ENvironment, GEochemistry and Ranging. MESSENGER brought high resolution cameras to the planet and revealed many new features and new terrain not previously seen on the Mariner mission. MESSENGER is scheduled to enter orbit around Mercury in March 2011, where it will spend a full year mapping the planet's surface. New images from MESSENGER show that Mercury's surface is more homogeneous, ancient, and more heavily cratered, unlike the surfaces of the Moon and Mars.</p>
 
       <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
         <div class="row row-cols-1 text-center pb-3">
-          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for the Sun</h3>
-          <p>Diameter = 4,880 km (3,031 miles)</p>
-          <p>Number of Natural Satellites = 0</p>
-          <p>Mean Distance from the Sun = 57,910,000 km
+          <h3 th:text="#{mercuryStatistic}" class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Mercury</h3>
+          <p th:text="#{mercuryDiameter}">Diameter = 4,880 km (3,031 miles)</p>
+          <p th:text="#{mercuryNumberOfNaturalSatellites}">Number of Natural Satellites = 0</p>
+          <p th:text="#{mercuryMeanDistanceFromTheSun}">Mean Distance from the Sun = 57,910,000 km
             (35,974,272 miles)</p>
-          <p>Rotational Period = 58.65 days</p>
-          <p>Orbital Period = 87.97 days</p>
+          <p th:text="#{mercuryRotationalPeriod}">Rotational Period = 58.65 days</p>
+          <p th:text="#{mercuryOrbitalPeriod}">Orbital Period = 87.97 days</p>
 
-          <p>Orbital Eccentricity = 0.206</p>
-          <p>Orbital Inclination = 7.004 degrees</p>
-          <p>Inclination of Axis = 0 degrees</p>
-          <p>Mean Surface Temperature = 179° C (354° F)</p>
-          <p>Main Atmospheric Component = Helium</p>
-          <p>Atmospheric Depth = negligible</p>
-          <p>Apparent Magnitude = -1.9</p>
+          <p th:text="#{mercuryOrbitalEccentricity}">Orbital Eccentricity = 0.206</p>
+          <p th:text="#{mercuryOrbitalInclination}">Orbital Inclination = 7.004 degrees</p>
+          <p th:text="#{mercuryInclinationOfAxis}">Inclination of Axis = 0 degrees</p>
+          <p th:text="#{mercuryMeanSurfaceTemperature}">Mean Surface Temperature = 179° C (354° F)</p>
+          <p th:text="#{mercuryMainAtmosphericComponent}">Main Atmospheric Component = Helium</p>
+          <p th:text="#{mercuryAtmosphericDepth}">Atmospheric Depth = negligible</p>
+          <p th:text="#{mercuryApparentMagnitude}">Apparent Magnitude = -1.9</p>
         </div>
       </div>
     </div>
