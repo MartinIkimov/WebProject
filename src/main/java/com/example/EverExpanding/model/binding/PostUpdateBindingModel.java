@@ -1,20 +1,23 @@
-package com.example.EverExpanding.model.view;
+package com.example.EverExpanding.model.binding;
 
 import com.example.EverExpanding.model.entity.Category;
 import com.example.EverExpanding.model.entity.MediaEntity;
 import com.example.EverExpanding.model.entity.UserEntity;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
-public class PostViewModelSummary {
+public class PostUpdateBindingModel {
+
     private Long id;
     private String title;
     private String description;
-    private MediaEntity media;
+    private MultipartFile multipartFile;
     private UserEntity author;
-    private List<Category> categories;
-    private boolean canDelete;
+    private String categories;
 
+    @NotBlank
     public String getTitle() {
         return title;
     }
@@ -23,6 +26,7 @@ public class PostViewModelSummary {
         this.title = title;
     }
 
+    @NotBlank
     public String getDescription() {
         return description;
     }
@@ -31,20 +35,13 @@ public class PostViewModelSummary {
         this.description = description;
     }
 
+
     public UserEntity getAuthor() {
         return author;
     }
 
     public void setAuthor(UserEntity author) {
         this.author = author;
-    }
-
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
     }
 
     public Long getId() {
@@ -55,19 +52,20 @@ public class PostViewModelSummary {
         this.id = id;
     }
 
-    public MediaEntity getMedia() {
-        return media;
+    @NotBlank
+    public String getCategories() {
+        return categories;
     }
 
-    public void setMedia(MediaEntity media) {
-        this.media = media;
+    public void setCategories(String categories) {
+        this.categories = categories;
     }
 
-    public boolean isCanDelete() {
-        return canDelete;
+    public MultipartFile getMultipartFile() {
+        return multipartFile;
     }
 
-    public void setCanDelete(boolean canDelete) {
-        this.canDelete = canDelete;
+    public void setMultipartFile(MultipartFile multipartFile) {
+        this.multipartFile = multipartFile;
     }
 }

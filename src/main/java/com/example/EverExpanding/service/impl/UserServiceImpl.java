@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -83,6 +84,11 @@ public class UserServiceImpl implements UserService {
     public UserViewModel findById(Long id) {
         UserEntity user = userRepository.findById(id).orElse(null);
         return modelMapper.map(user, UserViewModel.class);
+    }
+
+    @Override
+    public Optional<UserEntity> findByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
 }

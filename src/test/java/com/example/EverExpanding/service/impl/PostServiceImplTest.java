@@ -70,8 +70,10 @@ public class PostServiceImplTest {
     void testFindById() {
         Mockito.when(mockPostRepository.findById(testPost.getId()))
                 .thenReturn(Optional.of(testPost));
+        testUser = new UserEntity();
+        testUser.setEmail("peter@peter");
 
-        var actual = postServiceToTest.findById(testPost.getId());
+        var actual = postServiceToTest.findById(testPost.getId(), testUser.getEmail());
 
         Assertions.assertEquals(testPost.getTitle(), actual.getTitle());
     }

@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 public class PostServiceModel {
 
+    private Long id;
     private String title;
     private String categories;
     private String description;
@@ -50,5 +51,13 @@ public class PostServiceModel {
 
     public void setMedia(MediaEntity media) {
         this.media = media;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

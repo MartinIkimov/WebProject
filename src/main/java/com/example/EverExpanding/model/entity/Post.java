@@ -68,7 +68,7 @@ public class Post extends BaseEntity{
     }
 
 
-    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     public List<Comment> getComments() {
         return comments;
     }
@@ -78,7 +78,7 @@ public class Post extends BaseEntity{
     }
 
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     public List<Category> getCategories() {
         return categories;
     }
@@ -88,7 +88,7 @@ public class Post extends BaseEntity{
     }
 
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE)
     public MediaEntity getMedia() {
         return media;
     }

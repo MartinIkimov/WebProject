@@ -64,7 +64,7 @@ public class UserEntity extends BaseEntity{
         this.profilePicture = profilePicture;
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     public List<Role> getRoles() {
         return roles;
     }

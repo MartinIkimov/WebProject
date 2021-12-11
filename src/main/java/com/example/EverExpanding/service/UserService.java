@@ -4,6 +4,8 @@ import com.example.EverExpanding.model.entity.UserEntity;
 import com.example.EverExpanding.model.service.UserServiceModel;
 import com.example.EverExpanding.model.view.UserViewModel;
 
+import java.util.Optional;
+
 public interface UserService {
 
     void registerUserAndLogin(UserServiceModel newUser);
@@ -15,4 +17,6 @@ public interface UserService {
     UserEntity findByEmail(String email);
 
     UserViewModel findById(Long id);
+
+    Optional<UserEntity> findByUsername(String username);
 }

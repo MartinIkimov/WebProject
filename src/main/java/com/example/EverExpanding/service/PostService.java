@@ -11,7 +11,13 @@ public interface PostService {
 
     List<PostViewModelSummary> getAllPosts();
 
-    PostViewModelSummary findById(Long id);
+    PostViewModelSummary findById(Long id, String email);
 
     Post findPostById(Long routeId);
+
+    void deleteOffer(Long id);
+
+    boolean isOwner(String name, Long id);
+
+    void updatePost(PostServiceModel serviceModel, Long id);
 }

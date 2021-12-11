@@ -12,7 +12,8 @@ public class DeleteCacheScheduler {
         this.cacheRemover = cacheRemover;
     }
     
-    @Scheduled(cron = "0 0/30 * * * ?")
+//    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(fixedDelay = 500)
     public void removeCache() {
         this.cacheRemover.evictAllCacheValue();
     }

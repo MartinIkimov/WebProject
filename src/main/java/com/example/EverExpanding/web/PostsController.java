@@ -1,8 +1,11 @@
 package com.example.EverExpanding.web;
 
 import com.example.EverExpanding.model.binding.PostBindingModel;
+import com.example.EverExpanding.model.binding.PostUpdateBindingModel;
+import com.example.EverExpanding.model.entity.Category;
 import com.example.EverExpanding.model.entity.MediaEntity;
 import com.example.EverExpanding.model.service.PostServiceModel;
+import com.example.EverExpanding.model.view.PostViewModelSummary;
 import com.example.EverExpanding.service.CloudinaryImage;
 import com.example.EverExpanding.service.CloudinaryService;
 import com.example.EverExpanding.service.MediaService;
@@ -19,6 +22,8 @@ import javax.print.attribute.standard.Media;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/posts")
@@ -74,9 +79,61 @@ public class PostsController {
     }
 
     @GetMapping("/{id}/details")
-    public String postDetails(Model model, @PathVariable Long id) {
-        model.addAttribute("post", this.postService.findById(id));
+    public String postDetails(Model model, @PathVariable Long id, Principal principal) {
+        model.addAttribute("post", this.postService.findById(id, principal.getName()));
         return "post-details";
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteOffer(@PathVariable Long id, Principal principal) {
+        if(!postService.isOwner(principal.getName(), id)) {
+            throw new RuntimeException();
+        }
+        postService.deleteOffer(id);
+
+        return "redirect:/posts/all";
+    }
+
+    @GetMapping("/{id}/edit")
+    public String editPost(@PathVariable Long id, Model model, Principal principal) {
+        PostViewModelSummary postViewModelSummary = postService.findById(id, principal.getName());
+        PostUpdateBindingModel updateModel = modelMapper.map(postViewModelSummary, PostUpdateBindingModel.class);
+        model.addAttribute("updateModel", updateModel);
+        return "update";
+    }
+
+    @GetMapping("/{id}/edit/errors")
+    public String editOfferErrors(@PathVariable Long id) {
+        return "update";
+    }
+
+    @PatchMapping("/{id}/edit")
+    public String editPost(@PathVariable Long id, @Valid PostUpdateBindingModel updateBindingModel ,
+                           BindingResult bindingResult, RedirectAttributes redirectAttributes) throws IOException {
+
+        if(bindingResult.hasErrors()) {
+            redirectAttributes.addFlashAttribute("updateModel", updateBindingModel);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.updateModel", bindingResult);
+
+            return "redirect:/posts/" + id + "/edit/errors";
+        }
+
+        PostServiceModel serviceModel = modelMapper.map(updateBindingModel, PostServiceModel.class);
+        serviceModel.setId(id);
+
+        MediaEntity media = null;
+
+        if(updateBindingModel.getMultipartFile().getSize() > 0) {
+            media = createMediaEntity(updateBindingModel.getMultipartFile());
+            mediaService.saveMedia(media);
+        }
+        if(media != null) {
+            postService.updatePost(modelMapper.map(updateBindingModel, PostServiceModel.class), media.getId());
+        } else {
+            postService.updatePost(modelMapper.map(updateBindingModel, PostServiceModel.class), null);
+        }
+
+        return "redirect:/posts/" + id + "/details";
     }
 
     private MediaEntity createMediaEntity(MultipartFile file) throws IOException {
