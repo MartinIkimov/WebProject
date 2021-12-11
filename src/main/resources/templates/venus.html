@@ -11,8 +11,8 @@
     <div class="container text-lightGreen mb-5">
       <div class="row align-items-center">
         <div class="col text-center">
-          <h1 class="fw-bold mb-5 display-3">Venus</h1>
-          <h2 class="mt-5 pt-2 fst-italic">Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.</h2>
+          <h1 th:text="#{venusTitle}" class="fw-bold mb-5 display-3">Venus</h1>
+          <h2 th:text="#{venusTitleText}" class="mt-5 pt-2 fst-italic">Spinning in the opposite direction to most planets, Venus is the hottest planet, and one of the brightest objects in the sky.</h2>
         </div>
         <div id="canvasContainer" class="col">
           <canvas height="700"></canvas>
@@ -23,56 +23,56 @@
     
 
     <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Goddess of Love and Beauty</h3>
-      <p>Our next stop on the tour brings us to a planet completely covered by wispy white clouds. This is the planet Venus, and it is the second planet from the Sun. Venus is named after the Roman goddess of love and beauty. It is also known as the jewel of the sky, and as the morning star. Venus is so bright in the sky that it has been known since prehistoric times. Venus is sometimes referred to as Earth's sister planet, as both are nearly the same size and have nearly the same mass. Venus differs from all other bodies in the Solar System because it rotates from east to west. It is, in a sense, upside down. Another odd fact about this planet is that its day is longer than its year! Venus takes 225 Earth days to make one complete revolution around the Sun, while it takes 243 days for Venus to rotate once on its axis.</p>
+      <h3 th:text="#{goddessOfLoveAndBeauty}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Goddess of Love and Beauty</h3>
+      <p th:text="#{goddessOfLoveAndBeautyText}">Our next stop on the tour brings us to a planet completely covered by wispy white clouds. This is the planet Venus, and it is the second planet from the Sun. Venus is named after the Roman goddess of love and beauty. It is also known as the jewel of the sky, and as the morning star. Venus is so bright in the sky that it has been known since prehistoric times. Venus is sometimes referred to as Earth's sister planet, as both are nearly the same size and have nearly the same mass. Venus differs from all other bodies in the Solar System because it rotates from east to west. It is, in a sense, upside down. Another odd fact about this planet is that its day is longer than its year! Venus takes 225 Earth days to make one complete revolution around the Sun, while it takes 243 days for Venus to rotate once on its axis.</p>
       <div class="d-flex justify-content-evenly mb-5 mt-4">
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/venus04_sk12.jpg" class="card-img-top" alt="Sun Img">
           <div class="card-body mt-1">
-            <p class="card-text text-center">3D perspective view of Venus showing Maat Mons</p>
+            <p th:text="#{venusPicOne}" class="card-text text-center">3D perspective view of Venus showing Maat Mons</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/venus05_sk12.jpg" class="card-img-top" alt="Sun Img">
           <div class="card-body mt-1">
-            <p class="card-text text-center">Magellan radar closeup showing Alpha Region</p>
+            <p th:text="#{venusPicTwo}" class="card-text text-center">Magellan radar closeup showing Alpha Region</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/venus06_sk12.jpg" class="card-img-top" alt="Sun Img">
           <div class="card-body mt-1">
-            <p class="card-text text-center">3D perspective view of Venus showing Sapas Mons</p>
+            <p th:text="#{venusPicThree}" class="card-text text-center">3D perspective view of Venus showing Sapas Mons</p>
           </div>
         </div>
       </div>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">A Cloud Covered Greenhouse</h3>
-      <p>Contrary to its outward appearance, Venus is a very inhospitable world. The planet is covered by a thick atmosphere composed primarily of carbon dioxide. It contains almost no water vapor. The atmosphere is so thick in fact, that the pressure at the surface of the planet is 92 times that of Earth. Carbon dioxide allows solar radiation in, but prevents it from escaping back into space. This works very much like a greenhouse, and because of this "greenhouse effect", temperatures on the surface rise to over 900° F (482° C). To make things worse, the thick layer of clouds in the atmosphere is composed of sulfuric acid droplets. There is no water on Venus, but pools of strong sulfuric acid may be found. Beneath its innocent and delicate wispy cloud tops, however, Venus could easily be mistaken for Hades, the underworld.</p>
+      <h3 th:text="#{aCloudCoveredGreenhouse}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">A Cloud Covered Greenhouse</h3>
+      <p th:text="#{aCloudCoveredGreenhouseText}">Contrary to its outward appearance, Venus is a very inhospitable world. The planet is covered by a thick atmosphere composed primarily of carbon dioxide. It contains almost no water vapor. The atmosphere is so thick in fact, that the pressure at the surface of the planet is 92 times that of Earth. Carbon dioxide allows solar radiation in, but prevents it from escaping back into space. This works very much like a greenhouse, and because of this "greenhouse effect", temperatures on the surface rise to over 900° F (482° C). To make things worse, the thick layer of clouds in the atmosphere is composed of sulfuric acid droplets. There is no water on Venus, but pools of strong sulfuric acid may be found. Beneath its innocent and delicate wispy cloud tops, however, Venus could easily be mistaken for Hades, the underworld.</p>
       <div class="d-flex justify-content-center mb-3">
         <img src="/images/venus07_sk12.jpg" class="img-fluid mt-4" style="width: 800px" alt="sun spot">
       </div>
-      <p class="text-center mb-5">The Russian spacecraft Venera 13 took this image of the surface of Venus on March 1, 1982. The spacecraft survived on the surface for 2 hours and 7 minutes before it was destroyed by the intense heat and pressure.</p>
+      <p th:text="#{venusPicFour}" class="text-center mb-5">The Russian spacecraft Venera 13 took this image of the surface of Venus on March 1, 1982. The spacecraft survived on the surface for 2 hours and 7 minutes before it was destroyed by the intense heat and pressure.</p>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Venus</h3>
-      <p>Until recently, the dense cloud cover on Venus prevented every attempt to get a look at its surface. The U.S. Mariner spacecraft could only send back pictures of a world shrouded in clouds. The real breakthroughs came with Pioneer Venus in 1978, Magellan in 1990, and with two Soviet space probes in 1982. Pioneer Venus was able to do some low resolution mapping of the surface. The two Soviet Venera probes landed on the surface, but could only send back a few poorly aimed pictures before they were destroyed by the intense temperature and pressure. Nevertheless, they did show a barren rocky terrain. Magellan used high definition radar to map the planet in detail, and revealed a relatively young surface. It consists of plains covered by lava flows, and highland regions formed by geological activity. Thousands of volcanoes and numerous impact craters dot the surface. Venus is a very active planet undergoing constant change.</p>
+      <h3 th:text="#{venusFeatures}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Venus</h3>
+      <p th:text="#{venusFeaturesText}">Until recently, the dense cloud cover on Venus prevented every attempt to get a look at its surface. The U.S. Mariner spacecraft could only send back pictures of a world shrouded in clouds. The real breakthroughs came with Pioneer Venus in 1978, Magellan in 1990, and with two Soviet space probes in 1982. Pioneer Venus was able to do some low resolution mapping of the surface. The two Soviet Venera probes landed on the surface, but could only send back a few poorly aimed pictures before they were destroyed by the intense temperature and pressure. Nevertheless, they did show a barren rocky terrain. Magellan used high definition radar to map the planet in detail, and revealed a relatively young surface. It consists of plains covered by lava flows, and highland regions formed by geological activity. Thousands of volcanoes and numerous impact craters dot the surface. Venus is a very active planet undergoing constant change.</p>
 
       <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
         <div class="row row-cols-1 text-center pb-3">
-          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Venus</h3>
-          <p>Diameter = 12,103 km (7,518 miles)</p>
-          <p>Number of Natural Satellites = 0</p>
-          <p>Mean Distance from the Sun = 108,200,000 km
+          <h3 th:text="#{statisticsForVenus}" class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Venus</h3>
+          <p th:text="#{venusDiameter}">Diameter = 12,103 km (7,518 miles)</p>
+          <p th:text="#{venusNumberOfNaturalSatellites}">Number of Natural Satellites = 0</p>
+          <p th:text="#{venusMeanDistanceFromTheSun}">Mean Distance from the Sun = 108,200,000 km
             (67,214,920 miles)</p>
-          <p>Rotational Period = 243.0 days</p>
-          <p>Orbital Period = 224.7 days</p>
-          <p>Orbital Eccentricity = 0.007</p>
-          <p>Orbital Inclination = 3.39 degrees</p>
-          <p>Inclination of Axis = 3 degrees</p>
-          <p>Mean Surface Temperature = 482° C (899° F)</p>
-          <p>Main Atmospheric Component = 3.39 degrees</p>
-          <p>Atmospheric Pressure = 92 bars</p>
-          <p>Atmospheric Depth = 161 km (100 miles)</p>
-          <p>Apparent Magnitude = -4.4</p>
+          <p th:text="#{venusRotationalPeriod}">Rotational Period = 243.0 days</p>
+          <p th:text="#{venusOrbitalPeriod}">Orbital Period = 224.7 days</p>
+          <p th:text="#{venusOrbitalEccentricity}">Orbital Eccentricity = 0.007</p>
+          <p th:text="#{venusOrbitalInclination}">Orbital Inclination = 3.39 degrees</p>
+          <p th:text="#{venusInclinationOfAxis}">Inclination of Axis = 3 degrees</p>
+          <p th:text="#{venusSurfaceTemperature}">Mean Surface Temperature = 482° C (899° F)</p>
+          <p th:text="#{venusAtmosphericComponent}">Main Atmospheric Component = 3.39 degrees</p>
+          <p th:text="#{venusAtmosphericPressure}">Atmospheric Pressure = 92 bars</p>
+          <p th:text="#{venusAtmosphericDepth}">Atmospheric Depth = 161 km (100 miles)</p>
+          <p th:text="#{venusApparentMagnitude}">Apparent Magnitude = -4.4</p>
 
         </div>
       </div>

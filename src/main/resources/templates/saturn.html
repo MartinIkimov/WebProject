@@ -11,8 +11,8 @@
     <div class="container text-lightGreen mb-5">
       <div class="row align-items-center">
         <div class="col text-center">
-          <h1 class="fw-bold mb-5 display-3">Saturn</h1>
-          <h2 class="mt-5 pt-2 fst-italic">The most recognizable planet with a system of icy rings, Saturn is a very unique and interesting planet.</h2>
+          <h1 th:text="#{saturnTitle}" class="fw-bold mb-5 display-3">Saturn</h1>
+          <h2 th:text="#{saturnTitleText}" class="mt-5 pt-2 fst-italic">The most recognizable planet with a system of icy rings, Saturn is a very unique and interesting planet.</h2>
         </div>
         <div id="canvasContainer" class="col">
           <canvas height="700"></canvas>
@@ -23,60 +23,60 @@
     
 
     <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">God of the Harvest</h3>
-      <p>As we first enter the Saturnian system, we are presented with a sight of sheer beauty. It is a giant gas planet with a delicate system of silky rings. This is the planet Saturn. It is the sixth planet from the Sun and is the second largest in the Solar System. Saturn was named after the Roman god of agriculture and the harvest. His Greek counterpart was Chronus, the youngest of the Titans.</p>
-      <p>Many consider Saturn to be the most beautiful object in the Solar System. It is one of the brightest objects in the night sky, and has been known since prehistoric times. Galileo was the first person to observe Saturn through a telescope in 1610. He noticed the planet's odd shape, but was unable to figure out the significance of what he had seen. In 1659, Christiaan Huygens was able to correctly identify the odd shape as Saturn's rings. Since then, Saturn has been visited by three Spacecraft including Pioneer 11, Voyagers 1 and 2, and Cassini. The Cassini probe arrived at Saturn in 2004 and gave us spectacular new views of the planet and its moons. Saturn is surrounded by a small army of 82 known moons second only to Jupiter in number. Most of these moons are small, but seven of them are large enough to warrant further investigation.</p>
+      <h3 th:text="#{godOfHarvest}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">God of the Harvest</h3>
+      <p th:text="#{godOfHarvestText1}">As we first enter the Saturnian system, we are presented with a sight of sheer beauty. It is a giant gas planet with a delicate system of silky rings. This is the planet Saturn. It is the sixth planet from the Sun and is the second largest in the Solar System. Saturn was named after the Roman god of agriculture and the harvest. His Greek counterpart was Chronus, the youngest of the Titans.</p>
+      <p th:text="#{godOfHarvestText2}">Many consider Saturn to be the most beautiful object in the Solar System. It is one of the brightest objects in the night sky, and has been known since prehistoric times. Galileo was the first person to observe Saturn through a telescope in 1610. He noticed the planet's odd shape, but was unable to figure out the significance of what he had seen. In 1659, Christiaan Huygens was able to correctly identify the odd shape as Saturn's rings. Since then, Saturn has been visited by three Spacecraft including Pioneer 11, Voyagers 1 and 2, and Cassini. The Cassini probe arrived at Saturn in 2004 and gave us spectacular new views of the planet and its moons. Saturn is surrounded by a small army of 82 known moons second only to Jupiter in number. Most of these moons are small, but seven of them are large enough to warrant further investigation.</p>
       <div class="d-flex justify-content-evenly mb-5 mt-4">
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/saturn05_sk12.jpg" class="card-img-top" alt="Color image of Saturn">
           <div class="card-body">
-            <p class="card-text text-center">Cassini false color image of Saturn cloud formations</p>
+            <p th:text="#{saturnPicOne}" class="card-text text-center">Cassini false color image of Saturn cloud formations</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/saturn06_sk12.jpg" class="card-img-top" alt="Dione">
           <div class="card-body">
-            <p class="card-text text-center">Cassini image of the moon Dione orbiting above Saturn's rings</p>
+            <p th:text="#{saturnPicTwo}" class="card-text text-center">Cassini image of the moon Dione orbiting above Saturn's rings</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/saturn04_sk12.jpg" class="card-img-top" alt="Saturn clouds">
           <div class="card-body">
-            <p class="card-text text-center">False color Cassini image of Saturn clouds and details</p>
+            <p th:text="#{saturnPicThree}" class="card-text text-center">False color Cassini image of Saturn clouds and details</p>
           </div>
         </div>
       </div>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">The Ringed Planet</h3>
-      <p>Without a doubt the most striking feature of Saturn is its rings. Unlike the rings of Jupiter, which were not discovered until the Voyager 1 encounter in 1979, Saturn's rings have been known to exist since 1659. This is due to the fact that the ring system is quite large and bright. It can easily be seen from Earth with a small telescope. The view of Saturn's rings from Earth actually changes from year to year. This phenomenon occurrs because the tilt of Saturn's rings changes as it orbits the Sun. Because the rings are less than a mile in thickness, they seem to disappear completely every few years when they appear on edge as seen from Earth. This change in the ring system's orientation causes the brightness, or apparent magnitude of the planet to change as well.</p>
-      <p>Saturn has three main ring bands. They are identified as the A, B, and C-rings. A large gap can be seen between the A and B rings. This is known as the Cassini division, and was named after Giovanni Cassini, the discoverer the gap as well as four of Saturn's largest moons. It wasn't until the Voyager encounters with Saturn in 1980 and 1981 that the true mystery of Saturn's rings was unveiled. The ring system is really composed of seven rings with extremely complex structures. The larger rings are actually composed of many smaller ringlets. The Voyager probes also found strange radial, spoke-like structures in the rings. These are believed to be caused by dust particles. Saturn's innermost ring, the F-ring, appears to be knotted or braided. Astronomers are not sure yet what causes this strange phenomenon.</p>
-      <p>The Voyager probes revealed the existence of small moons in and near the rings. They are called "shepherding satellites" because they are believed to help keep the rings in place. Without the gravitation of these moons, the ring particles might fly off into space and the rings would be lost.</p>
-      <p>The origin of Saturn's rings is not well understood. They appear to be composed of millions of tiny particles of ice and rock, each in its own orbit around the planet. The size of these particles ranges from as small as a dust grain to as large as an iceberg. Astronomers believe that the rings could be the debris of one or more moons that were pulverized by asteroid or comet impacts.</p>
+      <h3 th:text="#{theRingedPlanet}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">The Ringed Planet</h3>
+      <p th:text="#{theRingedPlanetText1}">Without a doubt the most striking feature of Saturn is its rings. Unlike the rings of Jupiter, which were not discovered until the Voyager 1 encounter in 1979, Saturn's rings have been known to exist since 1659. This is due to the fact that the ring system is quite large and bright. It can easily be seen from Earth with a small telescope. The view of Saturn's rings from Earth actually changes from year to year. This phenomenon occurrs because the tilt of Saturn's rings changes as it orbits the Sun. Because the rings are less than a mile in thickness, they seem to disappear completely every few years when they appear on edge as seen from Earth. This change in the ring system's orientation causes the brightness, or apparent magnitude of the planet to change as well.</p>
+      <p th:text="#{theRingedPlanetText2}">Saturn has three main ring bands. They are identified as the A, B, and C-rings. A large gap can be seen between the A and B rings. This is known as the Cassini division, and was named after Giovanni Cassini, the discoverer the gap as well as four of Saturn's largest moons. It wasn't until the Voyager encounters with Saturn in 1980 and 1981 that the true mystery of Saturn's rings was unveiled. The ring system is really composed of seven rings with extremely complex structures. The larger rings are actually composed of many smaller ringlets. The Voyager probes also found strange radial, spoke-like structures in the rings. These are believed to be caused by dust particles. Saturn's innermost ring, the F-ring, appears to be knotted or braided. Astronomers are not sure yet what causes this strange phenomenon.</p>
+      <p th:text="#{theRingedPlanetText3}">The Voyager probes revealed the existence of small moons in and near the rings. They are called "shepherding satellites" because they are believed to help keep the rings in place. Without the gravitation of these moons, the ring particles might fly off into space and the rings would be lost.</p>
+      <p th:text="#{theRingedPlanetText4}">The origin of Saturn's rings is not well understood. They appear to be composed of millions of tiny particles of ice and rock, each in its own orbit around the planet. The size of these particles ranges from as small as a dust grain to as large as an iceberg. Astronomers believe that the rings could be the debris of one or more moons that were pulverized by asteroid or comet impacts.</p>
       <div class="d-flex justify-content-center mb-3">
         <img src="/images/saturn07_sk12.jpg" class="img-fluid mt-4" style="width: 800px" alt="Saturn's rings">
       </div>
-      <p class="text-center mb-5">This Cassini mosaic image shows that Saturn's stunning system of rings is much more complex than originally thought. They are composed of hundreds of smaller rings and gaps like the groves on a phonograph record.</p>
+      <p th:text="#{saturnPicFour}" class="text-center mb-5">This Cassini mosaic image shows that Saturn's stunning system of rings is much more complex than originally thought. They are composed of hundreds of smaller rings and gaps like the groves on a phonograph record.</p>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Saturn</h3>
-      <p>Even though the ring system is Saturn's most striking feature, the planet is also interesting in a number of other ways. Saturn is a gas giant with a chemical composition very similar to that of Jupiter. It is composed of about 75% hydrogen and 25% helium, with traces of methane, water, and ammonia. Astronomers believe that Saturn's interior is also similar to that of Jupiter, with a core of rock and ice, surrounded by a layer of liquid metallic hydrogen. There is no solid surface on Saturn. Instead, the atmospheric gases get denser and thicker as they approach the planet's center. Saturn is also the least dense of all the planets. Its specific gravity is only 0.7, which is less than that of water. If Saturn could be placed into a giant container of water, it would actually float!</p>
-      <p>Saturn shares many other features with its close cousin, Jupiter, such as high winds and cloud banding. Winds at the equator can reach an unbelievable 1,100 miles per hour. The horizontal bands on Saturn are much fainter than those on Jupiter. The Hubble space telescope has also revealed that storms occasionally erupt in Saturn's turbulent atmosphere. Like most of the other gas giant planets, Saturn has a strong magnetic field. Like Jupiter, Saturn is visibly flattened at its poles. This is caused by the planet's rapid rotation of only 10 hours, 39 minutes. In July of 2004, the Cassini probe is scheduled to arrive at Saturn. It will orbit the planet and send back detailed images and data. It will also drop the Huygens probe into the atmosphere of Saturn's moon Titan. There it will land and sample the composition of Titan's thick atmosphere and send back images of the surface.</p>
+      <h3 th:text="#{featuresOfSaturn}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of Saturn</h3>
+      <p th:text="#{featuresOfSaturnText1}">Even though the ring system is Saturn's most striking feature, the planet is also interesting in a number of other ways. Saturn is a gas giant with a chemical composition very similar to that of Jupiter. It is composed of about 75% hydrogen and 25% helium, with traces of methane, water, and ammonia. Astronomers believe that Saturn's interior is also similar to that of Jupiter, with a core of rock and ice, surrounded by a layer of liquid metallic hydrogen. There is no solid surface on Saturn. Instead, the atmospheric gases get denser and thicker as they approach the planet's center. Saturn is also the least dense of all the planets. Its specific gravity is only 0.7, which is less than that of water. If Saturn could be placed into a giant container of water, it would actually float!</p>
+      <p th:text="#{featuresOfSaturnText2}">Saturn shares many other features with its close cousin, Jupiter, such as high winds and cloud banding. Winds at the equator can reach an unbelievable 1,100 miles per hour. The horizontal bands on Saturn are much fainter than those on Jupiter. The Hubble space telescope has also revealed that storms occasionally erupt in Saturn's turbulent atmosphere. Like most of the other gas giant planets, Saturn has a strong magnetic field. Like Jupiter, Saturn is visibly flattened at its poles. This is caused by the planet's rapid rotation of only 10 hours, 39 minutes. In July of 2004, the Cassini probe is scheduled to arrive at Saturn. It will orbit the planet and send back detailed images and data. It will also drop the Huygens probe into the atmosphere of Saturn's moon Titan. There it will land and sample the composition of Titan's thick atmosphere and send back images of the surface.</p>
 
       <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
         <div class="row row-cols-1 text-center pb-3">
-          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Saturn</h3>
-          <p>Diameter = 120,536 km (74,565 miles)</p>
-          <p>Known Natural Satellites = 62</p>
-          <p>Mean Distancefrom the Sun = 1,429,400,000 km (884,740,000 miles)</p>
-          <p>Rotational Period = 10.25 days</p>
-          <p>Orbital Period = 29.46 years</p>
-          <p>Orbital Eccentricity =0.056</p>
-          <p>Orbital Inclination = 2.488 degrees</p>
-          <p>Inclination of Axis = 26.73 degrees</p>
-          <p>Mean Cloud Temperature = -125° C (-193° F)</p>
-          <p>Main Atmospheric Component = Hydrogen</p>
-          <p>Atmospheric Pressure = 1.4 bars</p>
-          <p>Atmospheric Depth = 145 km (90 miles)</p>
-          <p>Apparent Magnitude = 0.67</p>
+          <h3 th:text="#{statisticsForSaturn}" class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for Saturn</h3>
+          <p th:text="#{saturnDiameter}">Diameter = 120,536 km (74,565 miles)</p>
+          <p th:text="#{saturnKnownNaturalSatellites}">Known Natural Satellites = 62</p>
+          <p th:text="#{saturnMeanDistanceFromTheSun}">Mean Distancefrom the Sun = 1,429,400,000 km (884,740,000 miles)</p>
+          <p th:text="#{saturnRotationalPeriod}">Rotational Period = 10.25 days</p>
+          <p th:text="#{saturnOrbitalPeriod}">Orbital Period = 29.46 years</p>
+          <p th:text="#{saturnOrbitalEccentricity}">Orbital Eccentricity =0.056</p>
+          <p th:text="#{saturnOrbitalInclination}">Orbital Inclination = 2.488 degrees</p>
+          <p th:text="#{saturnAxisInclination}">Inclination of Axis = 26.73 degrees</p>
+          <p th:text="#{saturnMeanCloudTemperature}">Mean Cloud Temperature = -125° C (-193° F)</p>
+          <p th:text="#{saturnMainAtmosphericPressure}">Main Atmospheric Component = Hydrogen</p>
+          <p th:text="#{saturnAtmosphericPressure}">Atmospheric Pressure = 1.4 bars</p>
+          <p th:text="#{saturnAtmosphericDepth}">Atmospheric Depth = 145 km (90 miles)</p>
+          <p th:text="#{saturnApparentMagnitude}">Apparent Magnitude = 0.67</p>
         </div>
       </div>
     </div>

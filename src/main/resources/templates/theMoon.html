@@ -11,8 +11,8 @@
     <div class="container text-lightGreen mb-5">
       <div class="row align-items-center">
         <div class="col text-center">
-          <h1 class="fw-bold mb-5 display-3">The Moon</h1>
-          <h2 class="mt-5 pt-2 fst-italic">The only place beyond Earth that humans have explored, the Moon is the largest and brightest object in our sky – responsible for the tides and keeping Earth stable on its axis.</h2>
+          <h1 th:text="#{theMoonTitle}" class="fw-bold mb-5 display-3">The Moon</h1>
+          <h2 th:text="#{theMoonTitleText}" class="mt-5 pt-2 fst-italic">The only place beyond Earth that humans have explored, the Moon is the largest and brightest object in our sky – responsible for the tides and keeping Earth stable on its axis.</h2>
         </div>
         <div id="canvasContainer" class="col">
           <canvas height="700"></canvas>
@@ -23,54 +23,54 @@
     
 
     <div class="container-lg border border-darkGreen rounded-3 text-white bg-altBlack">
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Luna, Goddess of the Moon</h3>
-      <p>As we finish exploring the wonders of Earth, we turn our attention to a large, cratered object orbiting only 238,800 miles (384,400 km) away. This is Earth's moon, and it is the planet's only natural satellite. Although we call it simply "the Moon", it is associated with the Roman goddess Luna, who was goddess of the hunt and of the Moon. It is the sixth largest moon in the Solar System, and has been Earth's partner for most of the planet's known history. Although it has been lighting our dark nights for so long, its origins are mostly unknown. Some believe it was formed when a gigantic asteroid smashed into the Earth. The resulting impact flung molten material far out into space where it cooled and formed the Moon we see today. Others believe it was a wandering planetoid captured by the Earth's gravitational pull. Wherever it came from, it has fascinated mankind for centuries. The Moon is the only planetary body whose surface can be seen from Earth with the naked eye.</p>
+      <h3 th:text="#{goddesOfTheMoon}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Luna, Goddess of the Moon</h3>
+      <p th:text="#{goddesOfTheMoonText}">As we finish exploring the wonders of Earth, we turn our attention to a large, cratered object orbiting only 238,800 miles (384,400 km) away. This is Earth's moon, and it is the planet's only natural satellite. Although we call it simply "the Moon", it is associated with the Roman goddess Luna, who was goddess of the hunt and of the Moon. It is the sixth largest moon in the Solar System, and has been Earth's partner for most of the planet's known history. Although it has been lighting our dark nights for so long, its origins are mostly unknown. Some believe it was formed when a gigantic asteroid smashed into the Earth. The resulting impact flung molten material far out into space where it cooled and formed the Moon we see today. Others believe it was a wandering planetoid captured by the Earth's gravitational pull. Wherever it came from, it has fascinated mankind for centuries. The Moon is the only planetary body whose surface can be seen from Earth with the naked eye.</p>
       <div class="d-flex justify-content-evenly mb-5 mt-4">
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/moon04_sk12.jpg" class="card-img-top" alt="boulder">
           <div class="card-body">
-            <p class="card-text text-center">Large boulder on the Moon with the Earth in the background</p>
+            <p th:text="#{theMoonPicOne}" class="card-text text-center">Large boulder on the Moon with the Earth in the background</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/moon05_sk12.jpg" class="card-img-top" alt="rover">
           <div class="card-body">
-            <p class="card-text text-center">Image of the Apollo 15 Moon rover at the landing site</p>
+            <p th:text="#{theMoonPicTwo}" class="card-text text-center">Image of the Apollo 15 Moon rover at the landing site</p>
           </div>
         </div>
         <div class="card bg-altGrey" style="width: 15rem;">
           <img src="/images/moon06_sk12.jpg" class="card-img-top" alt="rock">
           <div class="card-body">
-            <p class="card-text text-center">Apollo 17 image of rock formations on the lunar surface</p>
+            <p th:text="#{theMoonPicThree}" class="card-text text-center">Apollo 17 image of rock formations on the lunar surface</p>
           </div>
         </div>
       </div>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Footsteps in the Lunar Sand</h3>
-      <p>Our fascination with the Moon came to an exciting climax in 1969. On July 20, Neil Armstrong became the first human being to step onto an alien world. The crew of Apollo 11 left their footsteps behind as a tribute to the spirit of human exploration. Five other Apollo missions soon followed. By the time these missions had ended, a total of ten men had walked on the Moon's surface. Their tasks included surveying, mapping, setting up experiments, and collecting samples of rock and sand. The Moon's surface is now littered with evidence of our visits. The remains of 6 lunar landers can be found along with various scientific experiment packages and several American flags. We now know a great deal about our partner in space. Recent unmanned missions have continued mapping the surface and have even detected the presence of water ice on the surface. The presence of water is important if we are to ever establish a permanent base on the Moon.</p>
+      <h3 th:text="#{theMoonFootsteps}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Footsteps in the Lunar Sand</h3>
+      <p th:text="#{theMoonFootstepsText}">Our fascination with the Moon came to an exciting climax in 1969. On July 20, Neil Armstrong became the first human being to step onto an alien world. The crew of Apollo 11 left their footsteps behind as a tribute to the spirit of human exploration. Five other Apollo missions soon followed. By the time these missions had ended, a total of ten men had walked on the Moon's surface. Their tasks included surveying, mapping, setting up experiments, and collecting samples of rock and sand. The Moon's surface is now littered with evidence of our visits. The remains of 6 lunar landers can be found along with various scientific experiment packages and several American flags. We now know a great deal about our partner in space. Recent unmanned missions have continued mapping the surface and have even detected the presence of water ice on the surface. The presence of water is important if we are to ever establish a permanent base on the Moon.</p>
       <div class="d-flex justify-content-center mb-3">
         <img src="/images/moon07_sk13.jpg" class="img-fluid mt-4" style="width: 800px" alt="earth for the moon">
       </div>
-      <p class="text-center mb-5">Earth rises above the horizon as the Apollo 11 spacecraft orbits the Moon. The Moon actually appears stationary in the sky from the Moon's surface because the same side of the Moon always faces the Earth.</p>
+      <p th:text="#{theMoonPicFour}" class="text-center mb-5">Earth rises above the horizon as the Apollo 11 spacecraft orbits the Moon. The Moon actually appears stationary in the sky from the Moon's surface because the same side of the Moon always faces the Earth.</p>
 
-      <h3 class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of the Moon</h3>
-      <p>Perhaps the most prominent features of the Moon are its numerous craters. Its surface has been bombarded continually throughout its history. Since the Moon has no measurable atmosphere and no liquid water, there is no erosion taking place. This has preserved the many thousands of craters on its surface.</p>
-      <p>Another prominent feature on the Moon are the smooth areas called maria. The maria are believed to have been formed by more recent lava flows which have covered over the older craters. There are also many mountain ranges and rift valleys on the Moon's surface. All of these features have combined to form a unique facial feature known as the "Man in the Moon" that can be seen if one knows what to look for. This feature is visible every night of the year because the Moon always keeps its same face towards the Earth. This is because its period of rotation and revolution are the same; 29 days, 12 hours and 44 minutes.</p>
-      <p>This cycle is known as the lunar month As the Moon orbits the Earth, it appears to change shape as more or less of its sunlit side is visible. When the Moon is on the opposite side of the Earth as the Sun, it appears as a full moon. When it is on the same side, it is invisible, also known as a new moon. Since it is so close to the Earth, the Moon's gravity pulls on our oceans and creates the tides.</p>
+      <h3 th:text="#{theMoonFeatures}" class="mt-3 border-bottom border-altGreyLight text-lightGreen mb-4">Features of the Moon</h3>
+      <p th:text="#{theMoonFeaturesText1}">Perhaps the most prominent features of the Moon are its numerous craters. Its surface has been bombarded continually throughout its history. Since the Moon has no measurable atmosphere and no liquid water, there is no erosion taking place. This has preserved the many thousands of craters on its surface.</p>
+      <p th:text="#{theMoonFeaturesText2}">Another prominent feature on the Moon are the smooth areas called maria. The maria are believed to have been formed by more recent lava flows which have covered over the older craters. There are also many mountain ranges and rift valleys on the Moon's surface. All of these features have combined to form a unique facial feature known as the "Man in the Moon" that can be seen if one knows what to look for. This feature is visible every night of the year because the Moon always keeps its same face towards the Earth. This is because its period of rotation and revolution are the same; 29 days, 12 hours and 44 minutes.</p>
+      <p th:text="#{theMoonFeaturesText3}">This cycle is known as the lunar month As the Moon orbits the Earth, it appears to change shape as more or less of its sunlit side is visible. When the Moon is on the opposite side of the Earth as the Sun, it appears as a full moon. When it is on the same side, it is invisible, also known as a new moon. Since it is so close to the Earth, the Moon's gravity pulls on our oceans and creates the tides.</p>
 
       <div class="container-fluid mt-5 mb-5 border border-altGreyLight border-2" style="width: 550px;">
         <div class="row row-cols-1 text-center pb-3">
-          <h3 class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for the Sun</h3>
-          <p>Diameter = 3,476 km (2,160 miles)</p>
-          <p>Mean Distance from Earth = 384,400 km (238,800 miles)</p>
-          <p>Rotational Period = 27.32 days</p>
-          <p>Orbital Period = 27.32 days</p>
-          <p>Orbital Eccentricity = 0.05</p>
-          <p>Inclination of Axis = 1.53 degrees</p>
-          <p>Mean Surface Temperature = -17° C (0° F)</p>
-          <p>Main Atmospheric Component = Hydrogen</p>
-          <p>Atmospheric Depth = negligible</p>
-          <p>Apparent Magnitude = -12.74</p>
+          <h3 th:text="#{theMoonStatistics}" class="text-lightGreen mt-3 mb-4 border-bottom border-altGreyLight">Statistics for the Sun</h3>
+          <p th:text="#{theMoonDiameter}">Diameter = 3,476 km (2,160 miles)</p>
+          <p th:text="#{theMoonDistanceFromEarth}">Mean Distance from Earth = 384,400 km (238,800 miles)</p>
+          <p th:text="#{theMoonRotationalPeriod}">Rotational Period = 27.32 days</p>
+          <p th:text="#{theMoonOrbitalPeriod}">Orbital Period = 27.32 days</p>
+          <p th:text="#{theMoonOrbitalEccentricity}">Orbital Eccentricity = 0.05</p>
+          <p th:text="#{theMoonAxisInclination}">Inclination of Axis = 1.53 degrees</p>
+          <p th:text="#{theMoonMeanSurfaceTemp}">Mean Surface Temperature = -17° C (0° F)</p>
+          <p th:text="#{theMoonMainAtmosphericComponent}">Main Atmospheric Component = Hydrogen</p>
+          <p th:text="#{theMoonAtmosphericDepth}">Atmospheric Depth = negligible</p>
+          <p th:text="#{theMoonApparentMagnitude}">Apparent Magnitude = -12.74</p>
 
         </div>
       </div>
